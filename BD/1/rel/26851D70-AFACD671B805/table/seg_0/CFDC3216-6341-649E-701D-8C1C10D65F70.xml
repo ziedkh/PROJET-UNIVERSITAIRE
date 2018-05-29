@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFDC3216-6341-649E-701D-8C1C10D65F70" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="ADHERANTS">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>ADHERANTS</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMCIN" id="A2496BB5-42BD-278B-B445-9417EA43031E">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>NUMCIN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOM" id="F47426A0-706A-A871-5646-7E36643F7188">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>NOM</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRENOM" id="19E4221F-DE8B-99F5-B811-73DF0D378DDD">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>PRENOM</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRESSE" id="013E7D1B-9773-2DDF-0786-FEEDE9851D08">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>ADRESSE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADHESION" id="6010BBDC-5858-4D55-4666-7ED39ECBBC66">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>ADHESION</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRMAIL" id="FEB130E6-186B-A4E5-D449-6CADEC51EB77">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ADHERANTS</sourceObjSchema>
+<sourceObjName>ADRMAIL</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BC53CE43-74BF-4843-D6C9-E23E812E541E" name="PK_MEMBRES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_MEMBRES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2496BB5-42BD-278B-B445-9417EA43031E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05D7EB3B-67BA-6DF6-6E2B-F0B400F9BAAD" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="PK_MEMBRES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_MEMBRES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:48:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2496BB5-42BD-278B-B445-9417EA43031E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

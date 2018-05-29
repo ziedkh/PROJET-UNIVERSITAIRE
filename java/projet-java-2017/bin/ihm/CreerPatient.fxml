@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreerPatientController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="308.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="NOM :" GridPane.halignment="CENTER" />
+            <Label text="PRENOM :" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="AGE :" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="SEXE :" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label prefHeight="56.0" prefWidth="119.0" text="Sécurité social :" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <RadioButton fx:id="homme" mnemonicParsing="false" onAction="#actionHomme" text="HOMME" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <RadioButton fx:id="femme" mnemonicParsing="false" onAction="#actionFemme" text="FEMME" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin></RadioButton>
+            <TextField fx:id="nom" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Slider fx:id="age" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </Slider>
+            <TextField fx:id="numSecu" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="valeurAge" maxWidth="35.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#handleButtonRetour" prefHeight="23.0" prefWidth="101.0" style="-fx-background-color: #dfe3ee; -fx-background-radius: 50;" text="Annuler" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#handleButtonValid" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #dfe3ee; -fx-background-radius: 50;" text="Valider" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Label text="CREATION PATIENT" GridPane.halignment="CENTER" />
+   </children>
+</GridPane>

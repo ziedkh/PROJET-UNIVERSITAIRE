@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="EMPRUNTS" directorySegmentName="seg_0" id="8084DFAB-532E-F984-5A77-FA074A14B376">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<schemaObject>EB5FE315-EEE4-FBC1-92C9-B880F18D296E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>83BE8EAE-5190-9ED8-F9BB-AD1A6EB23427</segment>
+<tableSpace>FBDB1F12-5F15-7E92-5EAB-59A5267D290C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FAIT_LE" id="158D2668-0674-E3AC-BB28-0893A96BBDA0">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUMCIN" id="2187E45D-2A9C-2BC3-1F68-C1FF71150FDF">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RENDU_LE" id="3CA7EA51-9F70-5441-80C6-AAA45A1CDAF4">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="A_RENDRE_LE" id="8D23A388-F3F0-3FA2-F953-51D44E32C585">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUMEXEMP" id="DFE24FEB-4299-F505-D1D7-27A615F2E5FE">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_EMPRUNTS_NUMDATE" id="46124E90-4E76-B2EE-35C9-5C2FDA4B0FD1">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<schemaObject>EB5FE315-EEE4-FBC1-92C9-B880F18D296E</schemaObject>
+<segment>82A21F59-4B4A-F923-D27A-8E73C8EDB2BC</segment>
+<tableSpace>FBDB1F12-5F15-7E92-5EAB-59A5267D290C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_EMPRUNTS_NUMCIN" id="B36D27D0-DDBF-BD10-EFD0-8730A0C6382C">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_EMPRUNTS_NUMEXEMP" id="B65F1320-498D-8E52-82F9-571F8707C283">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_EMPRUNTS_NUMDATE" id="F7243946-BF55-D8FD-BB45-5183D9C18E56">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<segment>82A21F59-4B4A-F923-D27A-8E73C8EDB2BC</segment>
+<tableSpace>FBDB1F12-5F15-7E92-5EAB-59A5267D290C</tableSpace>
+<existingIndex>46124E90-4E76-B2EE-35C9-5C2FDA4B0FD1</existingIndex>
+<indexSegment>82A21F59-4B4A-F923-D27A-8E73C8EDB2BC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

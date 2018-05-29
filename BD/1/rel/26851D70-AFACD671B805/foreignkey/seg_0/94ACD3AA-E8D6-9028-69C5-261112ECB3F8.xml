@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="94ACD3AA-E8D6-9028-69C5-261112ECB3F8" containerWithKeyObject="C698EE16-3435-0F06-4B58-8B8F92075CC8" localFKIndex="CEFADF3F-BCF9-A023-2FAD-9FB3A51F5DAE" name="FK_EMPRUNTS_NUMCIN">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>FK_EMPRUNTS_NUMCIN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<referredTableLongName>ZIED.ADHERANTS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CFDC3216-6341-649E-701D-8C1C10D65F70</referredTableID>
+<keyObject>05D7EB3B-67BA-6DF6-6E2B-F0B400F9BAAD</keyObject>
+<referredKeyID>05D7EB3B-67BA-6DF6-6E2B-F0B400F9BAAD</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>NUMCIN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

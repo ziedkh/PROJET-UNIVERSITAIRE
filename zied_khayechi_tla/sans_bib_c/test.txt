@@ -1,0 +1,37 @@
+
+constant A1 3
+VAR A2,A3;
+
+main(){
+
+ecrire(donner,(A3));       
+lire(A3);
+ecrire(donner,(A2));       
+lire(A2);
+
+ecrire(calculer,(A2+(3*A1)/(-5)));
+
+
+si(A3==A2){
+ecrire(egalite);
+}
+
+sinon{
+
+tantque(A3<=A2){
+ecrire(operation,(A2));
+}
+
+
+ecrire(zied,khayechi);
+lire(INFO_B);
+
+}
+
+
+
+
+
+
+
+}<<EOF>>

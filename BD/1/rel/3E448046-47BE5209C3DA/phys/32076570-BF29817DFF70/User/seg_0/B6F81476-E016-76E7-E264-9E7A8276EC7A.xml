@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="ZIED" directorySegmentName="seg_0" id="B6F81476-E016-76E7-E264-9E7A8276EC7A">
+<sourceConnName>zied</sourceConnName>
+<sourceObjName>ZIED</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:37 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<schemaObject>EB5FE315-EEE4-FBC1-92C9-B880F18D296E</schemaObject>
+<defTableSpace>FBDB1F12-5F15-7E92-5EAB-59A5267D290C</defTableSpace>
+<privileges>UNLIMITED TABLESPACE</privileges>
+</UserOraclev10g>

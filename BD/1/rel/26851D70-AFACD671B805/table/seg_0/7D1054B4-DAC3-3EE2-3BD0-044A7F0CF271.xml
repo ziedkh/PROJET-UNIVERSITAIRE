@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D1054B4-DAC3-3EE2-3BD0-044A7F0CF271" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="OUVRAGES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>OUVRAGES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ISBN" id="E5B07408-6DBA-93C1-F852-8B8E37557C6E">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>ISBN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITRE" id="6C75B983-F42F-5A72-8D6E-52E0A269CFE2">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>TITRE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 BYTE</dataTypeSize>
+<ownDataTypeParameters>150 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUTEUR" id="47AF21AD-F403-E209-E064-BD010CD66227">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>AUTEUR</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANNEEEDITION" id="36A0471B-0513-BB55-9E49-94149D855B0D">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>ANNEEEDITION</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENRE" id="488F80BC-E093-AEF5-70C8-628D2A372071">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>GENRE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA1C1E7E-384A-5D18-7FF9-7CC28A10DF1C" referredColumn="7DE08D70-6F97-726B-4692-F3A18033A302"/>
+</associations>
+</Column>
+<Column name="PRIX" id="45871F6C-94D3-2285-708A-BB9EEA3F7ED7">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>OUVRAGES</sourceObjSchema>
+<sourceObjName>PRIX</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C4243A07-2E3A-E4B5-4FB0-49E7DB0E5CF3" name="PK_OUVRAGES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_OUVRAGES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5B07408-6DBA-93C1-F852-8B8E37557C6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E874C15A-5E49-939C-07AE-81C3F99003A5" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="PK_OUVRAGES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_OUVRAGES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5B07408-6DBA-93C1-F852-8B8E37557C6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91286224-6297-097F-6C10-44BE3341621E" name="FK_OUVRAGES_GENRES">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="488F80BC-E093-AEF5-70C8-628D2A372071"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8084DFAB-532E-F984-5A77-FA074A14B376" schemaObject="EB5FE315-EEE4-FBC1-92C9-B880F18D296E" name="EMPRUNTS">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>EMPRUNTS</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMEXEMP" id="DFE24FEB-4299-F505-D1D7-27A615F2E5FE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>NUMEXEMP</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FAIT_LE" id="158D2668-0674-E3AC-BB28-0893A96BBDA0">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>FAIT_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_RENDRE_LE" id="8D23A388-F3F0-3FA2-F953-51D44E32C585">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>A_RENDRE_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMCIN" id="2187E45D-2A9C-2BC3-1F68-C1FF71150FDF">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>NUMCIN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C6232A9-406F-CF39-F048-5C34D683D935" referredColumn="08AF34C6-0788-4DDE-39AE-F012C61C2885"/>
+</associations>
+</Column>
+<Column name="RENDU_LE" id="3CA7EA51-9F70-5441-80C6-AAA45A1CDAF4">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>RENDU_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7243946-BF55-D8FD-BB45-5183D9C18E56" name="PK_EMPRUNTS_NUMDATE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EMPRUNTS_NUMDATE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFE24FEB-4299-F505-D1D7-27A615F2E5FE"/>
+<colUsage columnID="158D2668-0674-E3AC-BB28-0893A96BBDA0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46124E90-4E76-B2EE-35C9-5C2FDA4B0FD1" schemaObject="EB5FE315-EEE4-FBC1-92C9-B880F18D296E" name="PK_EMPRUNTS_NUMDATE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EMPRUNTS_NUMDATE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFE24FEB-4299-F505-D1D7-27A615F2E5FE"/>
+<colUsage columnID="158D2668-0674-E3AC-BB28-0893A96BBDA0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B36D27D0-DDBF-BD10-EFD0-8730A0C6382C" name="FK_EMPRUNTS_NUMCIN">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2187E45D-2A9C-2BC3-1F68-C1FF71150FDF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B65F1320-498D-8E52-82F9-571F8707C283" name="FK_EMPRUNTS_NUMEXEMP">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:47:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFE24FEB-4299-F505-D1D7-27A615F2E5FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

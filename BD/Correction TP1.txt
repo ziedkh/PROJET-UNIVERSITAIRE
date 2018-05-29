@@ -1,0 +1,68 @@
+/****** Correction TP1******/
+2. 
+SQL> CREATE USER Tpsgbd IDENTIFIED BY 123456 ;
+
+3. 
+SQL> GRANT DBA TO Tpsgbd;
+
+5. 
+SQL> DESC MembreF ;
+SQL>ALTER TABLE MembreF ADD(statut VARCHAR(5) NOT NULL) ;
+
+6.
+6.1. 
+SQL> SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION, INDEX_NAME
+FROM DBA_CONSTRAINTS 
+WHERE TABLE_NAME LIKE UPPER('MembreF') ;
+
+6.2. 
+SQL> ALTER TABLE membreF ADD (CONSTRAINT statut_famille_ck CHECK (statut IN ('fille','fils', 'pere','mere', 'autre'))) ;
+
+7. 
+SQL> SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION, INDEX_NAME
+FROM DBA_CONSTRAINTS 
+WHERE TABLE_NAME LIKE UPPER('MembreF') ;
+
+8.
+SQL>INSERT INTO MembreF (nomem,prenom,statut,daten,cin,ecole,endicap, remarque,nofam) VALUES (2, 'Rabia', 'tata','04/23/1972',76543219,'Non','Non', 'sans emploi', 1); 
+
+⇒ une erreur concernant le non respect (violated) de la contrainte statut_famille_ck 
+
+9.
+SQL> ALTER TABLE MembreF DISABLE CONSTAINT statut_famille_ck;
+
+10. 
+SQL>INSERT INTO MembreF (nomem,prenom,statut,daten,cin,ecole,endicap, remarque,nofam) VALUES (2, 'Rabia', 'tata','04/23/1972',76543219,'Non','Non', 'sans emploi', 1); 
+
+11.
+SQL>ALTER TABLE MembreF DROP CONSTRAINT statut_famille_ck ;
+
+12.
+SQL> SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION, INDEX_NAME
+FROM DBA_CONSTRAINTS 
+WHERE TABLE_NAME LIKE 'MembreF' ;
+
+13. 
+SQL>DELETE FROM Adherent WHERE noadh=106 AND noadh NOT IN (SELECT noadh FROM Donation) ;
+
+14. 
+SQL>SELECT noadh, nomadh, prenomadh, tel FROM adherent;
+
+15.
+SQL>SELECT f.nofam, nomfam,adr,prenom, statut, daten, cin,ecole, Handicap, mf.remarque FROM  famille f, membref mf
+where f.nofam=mf.nofam
+AND UPPER(nomfam) LIKE UPPER('Hmiden');
+ 
+16. 
+SELECT a.typeact, libact,COUNT(noact)as nbraction
+FROM action a, typeact t
+WHERE a.typeact=t.notyp
+AND dated >= '01/01/2017'
+AND datef<='12/31/2017'
+GROUP BY a.typeact, libact;
+
+17. 
+SELECT typedonat, SUM(montant) AS total
+FROM donation
+GROUP BY typedonat;
+

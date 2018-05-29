@@ -1,0 +1,324 @@
+2.
+
+DECLARE
+Vnbrapp NUMERIC ;
+Msg VARCHAR(80) ;
+vnbrp NUMERIC:=3;
+
+BEGIN 
+SELECT COUNT(numapp) INTO vnbrapp
+FROM Appartement
+WHERE UPPER(occupe) LIKE UPPER('non')
+And nbrpiece=vnbrp ;
+
+DBMS_OUTPUT.PUT_LINE ('*** Appartements disponibles avec: '|| vnbrp|| ' pieces***');
+DBMS_OUTPUT.NEW_LINE;
+
+IF vnbrapp=0 THEN
+    Msg := 'Auccun appartement qui correspond à votre demande n''est libre !' ;
+ELSE 
+   Msg := 'Il y''a '|| vnbrapp ||' appartements' ;
+END IF ;
+     DBMS_OUTPUT.PUT_LINE (msg) ;
+END ;
+
+
+/********************************************************************/
+3.
+DECLARE
+Vnom personne.nom%TYPE;
+Vprenom personne.prenom%TYPE ;
+Vidprop personne.idpers%TYPE ;
+
+VNumapp contratachat.numapp%TYPE :=1 ;  
+vIdimm contratachat.idimm%TYPE :=12 ;
+vnbrcont NUMERIC;
+
+BEGIN 
+--verifier si cet appartement se trouve dans la table contratAchat
+
+SELECT COUNT(numcontA) INTO vnbrcont
+FROM contratachat
+WHERE numapp=vnumapp AND idimm=vidimm ;
+
+IF vnbrcont>0 THEN
+
+SELECT p.idpers, nom, prenom INTO vidprop,vnom, vprenom
+FROM personne p, contratachat ca, propappart pa
+WHERE numapp=vnumapp AND idimm=vidimm 
+AND p.idpers=pa.idpers
+AND ca.numconta=pa.numconta
+
+-- chercher le dernier contrat d achat concernant cet appartement
+
+AND dateAchat = (SELECT dateachat FROM contratachat   
+WHERE numapp=vnumapp AND idimm=vidimm);
+
+      DBMS_OUTPUT.PUT_LINE ('le proprietaire de l''appartement est :  '|| vidprop ||' '|| vnom ||' '||vprenom ) ;
+DBMS_OUTPUT.NEW_LINE;
+
+ELSE 
+DBMS_OUTPUT.PUT_LINE ('aucun appartement trouvé avec ces critéres!');
+END IF;
+END ;
+
+
+/**********************************************************************/
+
+3.1.
+
+/*****************************************************************/
+3.2.
+
+DECLARE
+VNumapp contratachat.numapp%TYPE :=1 ;  
+vIdimm contratachat.idimm%TYPE :=13 ;
+
+CURSOR curprop IS
+
+SELECT p.idpers, nom, prenom 
+FROM personne p, contratachat ca, propappart pa
+WHERE numapp=vnumapp AND idimm=vidimm 
+AND p.idpers=pa.idpers
+AND ca.numconta=pa.numconta
+
+-- chercher le dernier contrat d achat concernant cet appartement
+
+AND dateAchat = (SELECT MAX(dateachat) FROM contratachat   
+WHERE numapp=vnumapp AND idimm=vidimm);
+
+
+Vcurprop curprop%ROWTYPE ;
+
+--traitement avec la boucle LOOP 
+BEGIN 
+OPEN curprop ; 
+
+DBMS_OUTPUT.PUT_LINE ('Liste des proprietaires de l''appartement:' );
+
+
+LOOP
+     FETCH curprop INTO vcurprop ;
+  EXIT WHEN curprop%NOTFOUND OR curprop%NOTFOUND IS NULL ;
+  DBMS_OUTPUT.NEW_LINE;   
+DBMS_OUTPUT.PUT_LINE ('-'||vcurprop.idpers||' '||vcurprop.nom||' '||vcurprop.prenom ) ;
+
+END LOOP ;
+IF curprop%ROWCOUNT = 0 THEN 
+   DBMS_OUTPUT.PUT_LINE('Aucun appartement avec ce numero!');
+END IF ;
+CLOSE curprop ;
+END ;
+/*******************************************/
+
+--traitement avec la boucle WHILE 
+
+DECLARE
+VNumapp contratachat.numapp%TYPE :=1 ;  
+vIdimm contratachat.idimm%TYPE :=13 ;
+
+CURSOR curprop IS
+
+SELECT p.idpers, nom, prenom 
+FROM personne p, contratachat ca, propappart pa
+WHERE numapp=vnumapp AND idimm=vidimm 
+AND p.idpers=pa.idpers
+AND ca.numconta=pa.numconta
+
+-- chercher le dernier contrat d achat concernant cet appartement
+
+AND dateAchat = (SELECT MAX(dateachat) FROM contratachat   
+WHERE numapp=vnumapp AND idimm=vidimm);
+
+
+Vcurprop curprop%ROWTYPE ;
+--traitement avec la boucle WHILE 
+BEGIN 
+OPEN curprop ; 
+DBMS_OUTPUT.PUT_LINE ('Liste des proprietaires de l''appartement:' );
+
+FETCH curprop INTO vcurprop ;
+
+WHILE curprop%FOUND LOOP
+
+     FETCH curprop INTO vcurprop ;
+
+DBMS_OUTPUT.NEW_LINE;
+DBMS_OUTPUT.PUT_LINE ('- '||vcurprop. idpers||' '||vcurprop.nom||'  '||vcurprop.prenom ) ;
+
+END LOOP ;
+IF curprop%ROWCOUNT = 0 THEN 
+   DBMS_OUTPUT.PUT_LINE ('Aucun appartement avec ce numero !');
+END IF ;
+CLOSE curprop ;
+END ;
+
+
+--traitement avec la boucle FOR
+
+DECLARE
+VNumapp contratachat.numapp%TYPE :=1 ;  
+vIdimm contratachat.idimm%TYPE :=13 ;
+
+CURSOR curprop IS
+
+SELECT p.idpers, nom, prenom 
+FROM personne p, contratachat ca, propappart pa
+WHERE numapp=vnumapp AND idimm=vidimm 
+AND p.idpers=pa.idpers
+AND ca.numconta=pa.numconta
+
+-- chercher le dernier contrat d achat concernant cet appartement
+
+AND dateAchat = (SELECT MAX(dateachat) FROM contratachat   
+WHERE numapp=vnumapp AND idimm=vidimm);
+
+
+Vcurprop curprop%ROWTYPE ;
+--traitement avec la boucle FOR
+
+i NUMERIC:=0 ;
+
+BEGIN
+
+DBMS_OUTPUT.PUT_LINE ('Liste des proprietaires de l''appartement:' ); 
+FOR vcurprop IN curprop LOOP
+
+DBMS_OUTPUT.NEW_LINE;
+DBMS_OUTPUT.PUT_LINE ('- '||vcurprop. idpers||' '||vcurprop.nom||' '||vcurprop.prenom ) ;
+I:=i+1 ;
+
+END LOOP ;
+IF i = 0 THEN 
+   DBMS_OUTPUT.PUT_LINE ('Aucun appartement avec ce numero !');
+END IF ;
+END ;
+/********************************************************/
+
+4.
+4.1.
+DECLARE
+Vnbr NUMERIC ;
+BEGIN 
+
+UPDATE ContratLoc SET loyer=loyer*1.05 
+WHERE dateloc < '01/01/2018' 
+AND datedepR IS NULL ;
+
+Vnbr:=SQL%ROWCOUNT ;
+COMMIT;
+
+DBMS_OUTPUT.PUT_LINE (vnbr||' loyers mis à jour !'  ) ;
+END ;
+/*******************************************************/
+
+4.2.
+DECLARE
+CURSOR curmisajLoy IS
+SELECT numcontLoc,loyer
+FROM ContratLoc 
+WHERE dateloc < '01/01/2018' 
+AND datedepR IS NULL FOR UPDATE OF loyer;
+
+vcontLoc curmisajLoy%ROWTYPE ;
+
+Vnbr NUMERIC ;
+BEGIN 
+OPEN curmisajLoy ;
+LOOP 
+FETCH curmisajLoy INTO vcontLoc ;
+EXIT WHEN curmisajLoy%NOTFOUND OR curmisajLoy%NOTFOUND IS NULL ;
+
+
+UPDATE ContratLoc SET loyer=loyer*1.05 
+WHERE CURRENT OF curmisajLoy;
+
+
+END LOOP ;
+
+Vnbr:=SQL%ROWCOUNT ;
+CLOSE curmisajLoy ;
+COMMIT;
+
+DBMS_OUTPUT.PUT_LINE (vnbr||' loyers mis à jour !'  ) ;
+END ;
+/********************************************************************/
+5.
+DECLARE
+CURSOR curapplib IS
+SELECT im.idimm, adresse, COUNT(ap.idimm)
+FROM immeuble im, appartement ap
+WHERE im.idimm=ap.idimm
+AND UPPER(occupe)=UPPER('non')
+GROUP BY im.idimm, adresse;
+
+--on doit definir chaque variable pour recuperer les donnees du cursseur car on a le
+--resultat d’’un agregat
+
+vidimm immeuble.idimm%TYPE ;
+vadresse immeuble.adresse%TYPE ;
+vnbrapp NUMERIC ;
+
+
+BEGIN 
+OPEN curapplib;
+
+LOOP
+FETCH curapplib INTO vidimm,vadresse,vnbrapp;
+
+EXIT WHEN curapplib%NOTFOUND OR curapplib%NOTFOUND IS NULL ;
+
+  DBMS_OUTPUT.PUT_LINE ('-'||vidimm||', '|| vadresse ||', ' ||vnbrapp||' appartements libres') ;
+
+END LOOP ;
+
+IF curapplib%ROWCOUNT =0 THEN 
+  DBMS_OUTPUT.PUT_LINE ('Tous les appartements sont occupés ! ') ;
+END IF ;
+CLOSE curapplib;
+END ;
+/***************************************************************/
+5.1.
+DECLARE
+
+CURSOR curAppLibres(vidimm immeuble.idimm%TYPE)  IS
+SELECT im.*, numapp,descript, nbrpiece, superficie, etage 
+FROM Immeuble im, appartement ap WHERE
+Im.idimm=ap.idimm
+AND UPPER(occupe) LIKE UPPER('non')
+AND im.idimm=vidimm ;
+
+Vcurapp curAppLibres%ROWTYPE ;
+BEGIN
+-- ouverture du curseur avec la valeur du parametre vidimm 
+OPEN curAppLibres(12);
+FETCH curAppLibres INTO vcurapp ;
+
+-- partie affichage des infos sur l’immeuble avant le traitement dans la boucle
+
+DBMS_OUTPUT.PUT_LINE('Liste des appartements disponibles au : '|| vcurapp.adresse||' ' || vcurapp.codep) ; 
+DBMS_OUTPUT.NEW_LINE;
+
+DBMS_OUTPUT.PUT_LINE('date de construction : '|| vcurapp.dateconstr||', Nombre d''etages: ' || vcurapp.nbretages) ; 
+
+
+-- affichage des donnes concernant les appartements
+
+WHILE curAppLibres%FOUND LOOP
+
+DBMS_OUTPUT.NEW_LINE;
+DBMS_OUTPUT.PUT_LINE('-'||vcurapp.numapp||' '|| vcurapp.descript||' '||vcurapp.nbrpiece||' '||vcurapp.superficie||' '||vcurapp.etage);
+
+FETCH curAppLibres INTO vcurapp ;
+
+
+END LOOP ; 
+
+IF curAppLibres%ROWCOUNT =0 THEN 
+
+DBMS_OUTPUT.PUT_LINE('Aucun appartement n''est disponible!');
+END IF ;
+
+CLOSE curAppLibres ;
+
+END;

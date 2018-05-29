@@ -1,0 +1,139 @@
+/********* Correction du TP2********/
+
+
+1.
+2.
+2.1.
+SQL> CREATE USER invit1
+IDENTIFIED BY 1234
+DEFAULT TABLESPACE USERS
+TEMPORARY TABLESPACE TEMP ;
+2.2. 
+SQL> CREATE USER invit2 
+IDENTIFIED BY 1234 
+DEFAULT TABLESPACE USERS 
+TEMPORARY TABLESPACE TEMP;
+2.3. 
+SELECT * FROM all_users WHERE username LIKE UPPER('invit%');
+3.
+GRANT CREATE SESSION TO invit1 ;
+3.3.
+SQL>SELECT PRIVILEGE FROM dba_sys_privs WHERE grantee=UPPER('invit1') ;
+SQL>SELECT PRIVILEGE FROM dba_tab_privs WHERE grantee=UPPER('invit1');
+4.
+4.1
+L’utilisateur invit1 ne peut pas créer la table car il n’a pas le privilège CREATE
+TABLE.
+4.2
+SQL> GRANT CREATE TABLE TO invit1 ;
+4.3. 
+=> il faut préciser en tant que TPSGBD le quota de mémoire que l’utilisateur à le droit d’utiliser dans cette tablespace.
+
+4.3.
+SQL> ALTER USER invit1 QUOTA UNLIMITED ON USERS;
+
+5. 
+SQL> GRANT REFERENCES(noact) ON Action TO invit1; 
+SQL> GRANT REFERENCES(nofam) ON famille TO invit1; 
+
+6.
+
+SQL> CREATE TABLE tab_act_familles(nofam NUMERIC(7) NOT NULL, noact VARCHAR(10)NOT NULL, descr VARCHAR(80));
+
+
+6.1. 
+SQL> ALTER TABLE tab_act_familles ADD (CONSTRAINT actfam_noact_fk FOREIGN KEY (noact) REFERENCES courssgbd.action(noact),CONSTRAINT actfam_nodon_fk FOREIGN KEY (nofam) REFERENCES courssgbd.famille(nofam));        
+6.2. 
+SQL> INSERT INTO tab_act_familles VALUES(4,'Act4','3 niveaux scolaires: 1er primaire(F), 3eme primaire(G), 4eme primaire(G)');
+
+6.3.
+
+REVOKE REFERENCES ON action FROM invit1 CASCADE CONSTRAINTS;
+
+
+6.4.
+SQL> select constraint_name , search_condition from DBA_CONSTRAINTS WHERE table_name like upper('tab_act_familles');
+
+7.
+7.1. 
+
+SQL> CREATE ROLE RL_tresorier NOT IDENTIFIED;
+SQL> GRANT SELECT, INSERT, UPDATE ON donation TO RL_tresorier;
+
+7.2.
+
+
+SQL> CREATE ROLE RL_membre NOT IDENTIFIED;
+
+SQL> GRANT SELECT ON donation TO RL_membre;
+
+SQL> GRANT SELECT, INSERT ON Action TO RL_membre;
+
+8. 
+SQL> GRANT RL_tresorier TO invit1;
+SQL> GRANT RL_membre TO invit2;
+
+9.
+SQL> GRANT CREATE SESSION TO invit2 ;
+ 
+SQL> SELECT typeact, COUNT(noact)
+FROM tpsgbd.Action
+GROUP BY typeact;           
+
+10.
+SQL> DROP ROLE RL_membre;
+
+11.
+SELECT *
+FROM tpsgbd.Action ;
+
+12.
+SQL> SELECT role, Table_name,column_name, privilege from role_tab_privs WHERE owner LIKE UPPER('courssgbd');
+
+/**************************************************************************/
+
+13.
+SQL> CREATE SEQUENCE Seq_joker START WITH 1;
+14.
+SQL>INSERT INTO Adherent VALUES (Seq_joker.NEXTVAL, 'Ben Yahya', 'Amine', 54778899,
+'Actif', 'bya@gmail.com', 56743817); 
+
+SQL>INSERT INTO ACTION(noact,libact,dated,datef,typeact)VALUES ('Act'||(to_CHAR(Seq_joker.NEXTVAL)),'Rentrée scolaire 2015','15/08/2014','15/09/2014',100);
+
+SQL> INSERT INTO Adherent VALUES (Seq_joker.NEXTVAL, 'Ben said', 'sondes', 92058391,
+'Porte parole','bss@gmail.com', 90123897);     
+
+SQL> INSERT INTO Action (noact, libact, dated, datef,typeact) VALUES ('Act'||(to_CHAR(Seq_joker.NEXTVAL)),'Rentrée scolaire 2016','15/08/2015','15/08/2015',100);
+
+15.
+SQL> DELETE FROM Adherent WHERE noadh =1 ;
+SQL> SELECT * FROM Adherent ;
+
+16.
+SQL> INSERT INTO Adherent VALUES (Seq_joker.NEXTVAL, 'Benahmed', 'amir',
+96098764, 'Actif' ,'baa@gmail.com', 90125699);   
+
+SQL> SELECT * FROM Adherent ;
+
+17. 
+
+SQL> SELECT sequence_name, min_value, max_value, increment_by, last_number, cache_size FROM USER_SEQUENCES;
+
+SQL> SELECT  min_value, max_value, increment_by, last_number, cache_size FROM USER_SEQUENCES WHERE sequence_name LIKE UPPER('Seq_joker');
+
+18. 
+SQL> ALTER SEQUENCE Seq_joker INCREMENT BY 5;
+
+19.
+SQL> INSERT INTO Action VALUES ('Act'||(To_CHAR(Seq_joker.NEXTVAL)),'Lunette de vue','01/02/2017','20/02/2017', 'collecte de fond  les frais de lunettes de vue: prix 60dt',102);
+20.
+SQL> SELECT seq_joker.currval FROM sys.dual;
+
+
+
+
+
+
+
+
+

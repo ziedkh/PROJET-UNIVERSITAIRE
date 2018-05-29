@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C698EE16-3435-0F06-4B58-8B8F92075CC8" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="EMPRUNTS">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>EMPRUNTS</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMEXEMP" id="59386896-C699-AB48-F727-B72216587E3B">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>NUMEXEMP</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4EE78767-2350-6ED3-931D-604955716F50" referredColumn="21F9A7B8-2207-AEE5-AD11-6724F64EB6E6"/>
+</associations>
+</Column>
+<Column name="FAIT_LE" id="237E955C-0F35-A998-0B83-6352CD77E7FE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>FAIT_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_RENDRE_LE" id="09ADD46E-0FC2-55D2-BD91-959B53087BBE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>A_RENDRE_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMCIN" id="0CBF5141-1F0A-2F8D-BBCE-69B92B4107F8">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>NUMCIN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="94ACD3AA-E8D6-9028-69C5-261112ECB3F8" referredColumn="A2496BB5-42BD-278B-B445-9417EA43031E"/>
+</associations>
+</Column>
+<Column name="RENDU_LE" id="783151E1-406A-3E0D-40E8-A604E0929EB6">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EMPRUNTS</sourceObjSchema>
+<sourceObjName>RENDU_LE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D308F3C0-7934-52B8-A8AC-3FCEEB8DCE01" name="PK_EMPRUNTS_NUMDATE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EMPRUNTS_NUMDATE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59386896-C699-AB48-F727-B72216587E3B"/>
+<colUsage columnID="237E955C-0F35-A998-0B83-6352CD77E7FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6BB32B1A-FFFE-2D59-A106-0CFD2D57592A" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="PK_EMPRUNTS_NUMDATE">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EMPRUNTS_NUMDATE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59386896-C699-AB48-F727-B72216587E3B"/>
+<colUsage columnID="237E955C-0F35-A998-0B83-6352CD77E7FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CEFADF3F-BCF9-A023-2FAD-9FB3A51F5DAE" name="FK_EMPRUNTS_NUMCIN">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0CBF5141-1F0A-2F8D-BBCE-69B92B4107F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E268B00-4CE8-646B-E4C9-915842F787DF" name="FK_EMPRUNTS_NUMEXEMP">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59386896-C699-AB48-F727-B72216587E3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

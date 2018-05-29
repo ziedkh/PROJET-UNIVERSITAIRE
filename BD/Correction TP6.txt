@@ -1,0 +1,190 @@
+/************Correction TP6*******************/
+1.
+set serveroutput on;
+
+ACCEPT dateD
+PROMPT 'Donner la date du début de la période :' 
+
+ACCEPT dateF
+PROMPT 'Donner la date de la fin de la période : '
+DECLARE
+Vmax contratloc.loyer%TYPE ;
+
+vdateD DATE :=&dated ;
+vdateF DATE :=&datef ;
+
+tabvid EXCEPTION;
+
+
+BEGIN
+
+Vmax := f_maxLoyer(vdateD,vdateF) ;
+IF Vmax=0 THEN 
+	RAISE tabvid;
+ELSE 
+	DBMS_OUTPUT.PUT_LINE('Le loyer le plus élevé entre le  '||vdated ||' et le  '||vdatef ||' est : '||vmax);
+END IF ; 
+
+
+EXCEPTION
+WHEN tabvid THEN DBMS_OUTPUT.PUT_LINE('Pas d''appartements louées entre le '||vdated || ' et le '||vdatef);
+
+WHEN ErDate THEN DBMS_OUTPUT.PUT_LINE ('Erreur dans le choix de la période : la date début doit être inferieur à la date fin et à la date d''aujourd''hui!');
+END ;
+/
+
+------------------------------------------------------------
+1.1
+
+CREATE OR REPLACE FUNCTION f_maxloyer(dated DATE,datef DATE) RETURN Contratloc.loyer%TYPE IS
+
+Vlmax Contratloc.loyer%TYPE ;
+Errmax EXCEPTION ;
+BEGIN
+  SELECT MAX(loyer) INTO Vlmax
+  FROM Contratloc
+  WHERE dateLoc>=dated OR dateLoc<datef;
+
+  IF vlmax IS NOT NULL THEN
+     RETURN (vlmax) ;
+  ELSE 
+     RAISE Errmax ;
+  END IF ;
+EXCEPTION
+WHEN Errmax THEN RETURN(0) ;
+END ;
+------------------------------------------------------------------------
+1.2.
+
+set serveroutput on;
+
+ACCEPT dateD
+PROMPT 'Donner la date du debut de la periode :' 
+
+ACCEPT dateF
+PROMPT 'Donner la date de la fin de la periode : '
+DECLARE
+Vmax contratloc.loyer%TYPE ;
+
+vdateD DATE :=&dated ;
+vdateF DATE :=&datef ;
+
+tabvid EXCEPTION;
+ErDATE EXCEPTION;
+
+BEGIN
+IF vdated>SYSDATE OR vdated>=vdatef THEN RAISE ErDate ; 
+ELSE
+
+Vmax := f_maxLoyer(vdateD,vdateF) ;
+IF Vmax=0 THEN 
+	RAISE tabvid;
+ELSE 
+	DBMS_OUTPUT.PUT_LINE('Le loyer le plus élevé entre le  '||vdated ||' et le  '||vdatef ||' est : '||vmax);
+END IF ; 
+END IF ; 
+
+EXCEPTION
+WHEN tabvid THEN DBMS_OUTPUT.PUT_LINE('Pas d''appartements louées entre le '||vdated || ' et le '||vdatef);
+
+WHEN ErDate THEN DBMS_OUTPUT.PUT_LINE ('Erreur dans le choix de la période : la date début doit être inferieur à la date fin et à la date d''aujourd''hui!');
+END ;
+/
+-----------------------------------------------------------
+2.
+
+DECLARE
+
+Vadr immeuble.adresse%TYPE ; 
+Vidim Immeuble.idimm%TYPE;
+Vnomp personne.nom%TYPE := 'Kaabi';
+Vprenomp personne.prenom%TYPE := 'mohamed' ;
+Errempty EXCEPTION ;
+Errmany EXCEPTION ;
+
+BEGIN
+  Vidim :=f_chercherIm(vnomp,vprenomp) ;
+
+  IF vidim = 0 THEN RAISE ERRempty ;
+  ELSE IF vidim = -1 THEN RAISE ERRmany ;
+     ELSE
+     Vadr := f_chercheradrIm(vidim) ;
+      
+      p_appartLibre(vidim) ;
+     END IF ;
+END IF ;
+
+EXCEPTION
+WHEN errempty THEN DBMS_OUTPUT.PUT_LINE('Cette personne n''est pas locataire !');
+WHEN errmany THEN DBMS_OUTPUT.PUT_LINE('Plusieurs personnes avec ce nom et ce prénom !');
+
+
+END ;
+--------------------------------------------------------
+
+
+2.1.
+CREATE OR REPLACE FUNCTION f_chercherIm (nomp personne.nom%TYPE,prenomp personne.prenom%TYPE) 
+RETURN Immeuble.idimm%TYPE IS
+
+vidim Immeuble.idimm%TYPE ;
+
+BEGIN
+  SELECT idimm INTO vidim
+  FROM contratLoc cl, personne p
+  WHERE cl.idpers=p.idpers
+  AND UPPER(nom) LIKE UPPER(nomp)
+  AND UPPER(prenom) LIKE UPPER(prenomp) ;
+  RETURN vidim ;
+EXCEPTION
+WHEN NO_DATA_FOUND THEN RETURN(0) ;
+WHEN TOO_MANY_ROWS THEN RETURN(-1) ;
+
+END f_chercherIm;
+-------------------------------------------------------------
+
+2.2.
+CREATE OR REPLACE PROCEDURE p_appartLibre(idim Immeuble.idimm%TYPE) IS
+
+CURSOR curAppLibre IS
+SELECT numapp, descript,nbrpiece,superficie,etage
+FROM Appartement 
+WHERE UPPER(occupe) LIKE ('non') 
+AND idimm=idim;
+
+Vcurapp curAppLibre%ROWTYPE ;
+CurVide EXCEPTION ;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Les appartements libres de l''immeuble : '|| idim) ;
+  OPEN curAppLibre ;
+ 
+ LOOP 
+   FETCH curAppLibre INTO vcurapp ;
+   EXIT WHEN curAppLibre%NOTFOUND OR curAppLibre%NOTFOUND IS NULL ;
+   DBMS_OUTPUT.PUT_LINE('- '|| vcurapp.numapp||', '|| vcurapp.descript|| '- '|| vcurapp.nbrpiece||'   
+   pieces '||  vcurapp.superficie|| ' m2 '|| vcurapp.etage ||' etage') ;
+  END LOOP ;
+IF curAppLibre%ROWCOUNT=0 THEN RAISE curvide ;
+END IF ;
+  CLOSE curAppLibre ;
+
+EXCEPTION
+WHEN curvide THEN DBMS_OUTPUT.PUT_LINE('Aucun appartement n''est libre ! ') ;
+END ;
+---------------------------------------------------------------
+2.3.
+
+CREATE OR REPLACE FUNCTION f_chercheradrIm (idim Immeuble.idimm%TYPE) RETURN Immeuble. Adresse%TYPE IS
+
+result Immeuble. Adresse%TYPE ;
+Errpasim EXCEPTION ;
+
+BEGIN
+  SELECT adresse INTO result
+  FROM Immeuble
+  WHERE idimm=idim ;
+  RETURN result ;
+EXCEPTION
+WHEN NO_DATA_FOUND THEN RETURN('false') ;
+
+END f_chercheradrIm;

@@ -1,0 +1,123 @@
+/*************** Correction TP 4 ************/
+
+
+1.1. 
+=> des index implecites (Normale)
+1.2.
+SQL>SELECT * FROM famille
+WHERE UPPER(nomfam) LIKE UPPER ('dridi');
+=> temps d'execution 0,02s
+
+1.3.
+SQL> CREATE INDEX ixd_fam ON famille(nomfam);
+SQL> SELECT * FROM USER_INDEXES WHERE INDEX_NAME LIKE UPPER('ixd_fam');
+1.4.
+SQL> SELECT statut, COUNT(noadh)
+FROM adherent
+GROUP BY statut;
+
+=> temps d'execution 0,09s
+1.5.
+CREATE BITMAP INDEX ixd_bit ON testIndex(valeur) ;
+
+2.
+2.1.
+DECLARE
+                   /* declarer une variable de type numerique*/
+nbradr numeric(2);
+BEGIN
+                  /* chercher avec le COUNT  le nombre d'adherents et mettre le    
+                     resultat dans la variable nbradr*/
+SELECT COUNT (noadh) INTO nbradr
+FROM adherent;
+                  /* afficher le contenue de la variable nbradr*/ 
+DBMS_OUTPUT.PUT_LINE('Vous avez '|| nbradr || ' adherents.');
+END;
+
+=> Chercher le Nombre d'adherent
+
+2.2.
+
+DECLARE
+vinfofam famille%ROWTYPE ; 
+
+BEGIN
+SELECT * INTO vinfofam FROM famille
+WHERE UPPER(nomfam) LIKE UPPER('dridi');
+
+DBMS_OUTPUT.PUT_LINE('********** La famille DRIDI ********');
+DBMS_OUTPUT.PUT_LINE('Numero : '|| vinfofam.nofam);
+DBMS_OUTPUT.PUT_LINE('Membres de la familles sont  : '|| vinfofam.nbrpers);
+DBMS_OUTPUT.PUT_LINE('Remarque : '|| vinfofam.remarque);
+DBMS_OUTPUT.PUT_LINE('Numero de telephone : '|| vinfofam.tel);
+DBMS_OUTPUT.PUT_LINE('Adresse : '|| vinfofam.adr||' '||vinfofam.ville );
+END;
+
+=> Cherche le tuple concernant la famille dridi et  affiche les données suvantes: 
+********** La famille DRIDI ********
+Numero : 1
+Membres de la familles sont  : 3
+Remarque : le père est décédé
+Numero de telephone : 93456787
+Adresse : 12 rue yyyyy Ariana
+
+2.3.
+
+ORA-01403 : no data found=> la requête SELECT INTO ne trouve aucun tuple dans la table famille avec le nom hamdi.
+2.4
+DECLARE
+vlibact Action.libact%type ; 
+vdated Action.dated%TYPE;
+vdatef Action.datef%TYPE;
+vdesc Action.description%TYPE;
+VnoAct Action.noact%TYPE := 'Act3';
+BEGIN
+SELECT libact, dated, datef, description INTO vlibact, vdated, vdatef, vdesc FROM Action
+WHERE UPPER(noact)=UPPER(vnoAct);
+
+DBMS_OUTPUT.PUT_LINE('Action : '||VnoAct||' '|| vlibact||' du '||vdated||' au ' ||vdatef);
+DBMS_OUTPUT.PUT_LINE(vdesc);
+END;
+
+
+resultat d'execution: Action : Act3 Rentrée scolaire 2015 du 08/15/2014 au 09/15/2014
+
+3.
+3.1.
+DECLARE
+--varchar(15);
+Vnom VARCHAR(25);
+
+BEGIN
+SELECT nomadh INTO vnom
+FROM adherent where noadh=4 ;
+
+DBMS_OUTPUT.PUT_LINE('le nom de l''adherent numero  4 est : '|| vnom);
+END;
+3.2.
+DECLARE
+
+Vtypeact typeAct%ROWTYPE; 
+
+BEGIN
+SELECT * INTO Vtypeact 
+FROM TypeAct where notyp=101 ;
+
+DBMS_OUTPUT.PUT_LINE('Type action 101 : '|| Vtypeact.lib||' '||Vtypeact. descrit);
+END;
+
+/***** OU ****/
+DECLARE
+
+vlib typeact.lib%TYPE;
+Vdesc typeact.descrit%TYPE;
+
+BEGIN
+SELECT lib,descrit INTO Vlib,vdesc
+FROM TypeAct where notyp=101 ;
+
+DBMS_OUTPUT.PUT_LINE('Type action 101 : '|| vlib||' '||vdesc);
+END;
+
+
+

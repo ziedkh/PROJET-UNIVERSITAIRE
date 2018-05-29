@@ -1,0 +1,183 @@
+/******* Preparation du TP******/
+
+
+SQL> DROP TABLE Membref;
+
+SQL> CREATE TABLE MembreF (nomem NUMERIC(7) NOT NULL CONSTRAINT memb_nomem_pk PRIMARY KEY,
+prenom VARCHAR(25)NOT NULL,
+statut VARCHAR(5) NOT NULL CHECK (statut IN ('fille','fils', 'pere','mere', 'autre')),
+daten DATE NOT NULL,
+cin NUMERIC(8) UNIQUE,
+ecole numeric(1) NOT NULL CHECK (ecole IN (0,1)),
+Handicap numeric(1) NOT NULL CHECK (handicap IN (0,1)),
+remarque VARCHAR(60),
+nofam NUMERIC(7),
+CONSTRAINT membre_nofam_fk FOREIGN KEY (nofam) REFERENCES Famille(nofam));
+
+SQL> INSERT INTO MembreF (nomem,prenom,statut,daten,cin,ecole,handicap,remarque,nofam) VALUES (Seq_joker.NEXTVAL, 'Rabia', 'mere','23/04/1972',76543219,0,0, 'sans emploi', 1);
+
+SQL>INSERT INTO MembreF (nomem,prenom,statut,daten,ecole,handicap,nofam) VALUES (Seq_joker.NEXTVAL, 'Sana', 'fille','09/12/2001',1,0, 1);
+
+SQL>INSERT INTO MembreF (nomem,prenom,statut,daten,ecole,handicap,remarque,nofam) VALUES (Seq_joker.NEXTVAL,'Amir','fils','20/08/2008',1, 1, 'suit un traitement suite à des brulures au visage',4);
+
+SQL> update adherent SET nomadh='Bensaid' WHERE nomadh='Ben said';
+
+SQL>COMMIT;
+
+
+***********************Correction du TP3**********************
+
+1
+1.1.
+SQL> CREATE OR REPLACE VIEW VList_adherent(nmero, nom, prenom, tel, email)
+AS SELECT noadh, nomadh, prenomadh, tel, adremail
+FROM adherent; 
+
+1.2. 
+SQL> SELECT * FROM VList_adherent;
+2.
+2.1. 
+SQL> CREATE OR REPLACE VIEW VinfoFamille (nofam,nbrenfscol, nbrenfhand) AS SELECT nofam, SUM(ecole),SUM(handicap) FROM membref GROUP BY nofam;
+
+
+2.2.
+SQL> SELECT * FROM VinfoFamille; 
+
+3. 
+3.1.
+SQL>CREATE OR REPLACE VIEW VList_infoFamille AS SELECT f.nofam, nomfam, nbrpers, tel,ville, nbrenfscol, nbrenfhand FROM Famille f, VInfoFamille vf WHERE f.nofam=vf.nofam;
+
+SQL> SELECT * FROM VList_infoFamille;
+
+3.2.
+SQL>SELECT nofam, nomfam,nbrpers,tel FROM VList_infofamille where nbrenfscol>1;
+4. 
+
+SELECT * FROM USER_CATALOG WHERE TABLE_TYPE LIKE'VIEW';
+4.1.
+SQL> Grant SELECT ON VList_adherent TO Invit2;
+4.2.
+SQL> connect Invit2/4321
+SQL> SELECT * FROM courssgbd.Vlist_adherent WHERE email IS NOT NULL;
+
+/***** Remarque: L'utilisateur peut creer sa propre vue qui fait appel à la vu courssgbd.Vlist_adherent****/
+/*Etant courssgbd:*/
+SQL> Grant CREATE VIEW TO Invit2;
+/*Etant Ivite2*/
+SQL> CREATE VIEW VmalistAdh AS SELECT * FROM courssgbd.Vlist_adherent WHERE email IS NOT NULL;
+SQL> SELECT * FROM Vmalistadh;
+/************/
+
+5.
+
+SQL> INSERT INTO Action VALUES ('Act'|| (To_CHAR(Seq_joker.NEXTVAL)),'Lunette de vue', '23/01/2018', '20/02/2018', 'collecte pour couvrir les frais de lunettes de vue  60dt', 102);
+
+SQL> INSERT INTO Action VALUES ('Act'|| (To_CHAR(Seq_joker.NEXTVAL)),'Lunette de vue', '02/02/2018', '28/02/2018', 'collecte pour couvrir les frais de lunettes de vue  250dt', 102);
+
+SQL> SELECT * FROM Action;
+
+5.1.
+CREATE OR REPLACE VIEW VAct_encours AS SELECT noact, libact, dated,datef, description
+FROM Action
+WHERE dated<sysdate
+AND datef> sysdate;
+
+
+5.2.
+
+SELECT * FROM Vact_encours;
+5.3. 
+UPDATE Vact_encours SET datef='30/01/2018' WHERE UPPER(noact) LIKE UPPER('Act47');
+5.4.
+
+SQL> SELECT * FROM Vact_encours;
+=> La vue n'affiche aucunne action car apres la modification aucune action n'est en cours.
+SQL>SELECT * FROM Action; 
+
+5.5.
+
+SQL> CREATE OR REPLACE VIEW VAct_encours AS SELECT noact, libact, dated,datef, description
+FROM Action
+WHERE dated<sysdate
+AND datef> sysdate
+WITH CHECK OPTION CONSTRAINT check_act_encours;
+5.6.
+SQL>UPDATE Vact_encours SET dated='04/02/2018' WHERE UPPER(noact) LIKE UPPER('Act52');
+
+/*****/
+ERROR at line 1:
+ORA-01402: view WITH CHECK OPTION where-clause violation
+/*****/
+5.7.
+SQL>CREATE OR REPLACE VIEW VAct_encours AS SELECT noact, libact, dated,datef, description
+FROM Action
+WHERE dated<sysdate
+AND datef> sysdate
+WITH READ ONLY;
+5.8.
+
+SQL> UPDATE Vact_encours SET datef='05/02/2018' WHERE noact LIKE 'Act22';
+
+/*****/
+ERROR at line 1:
+ORA-42399: cannot perform a DML operation on a read-only view
+/*****/
+6.
+6.1.
+SQL> CREATE OR REPLACE VIEW VDonation
+AS SELECT typedonat, datedont, descr, montant
+FROM Donation; 
+6.2.
+SQL>INSERT INTO VDonation VALUES ('espèce',sysdate, 'donation libre',200.0);
+
+=> ERROR at line 1:
+ORA-01400: cannot insert NULL into ("COURSSGBD"."DONATION"."NODONAT")
+
+=> La clé primaire de la table Donation ne peut pas etre Null pour le tuple qu'on veut inserer. 
+
+7.
+SQL>INSERT INTO VList_InfoFamille VALUES (5,'Daoued',8,5678905,'Jandouba');
+
+=> ERROR at line 1:
+ORA-00947: not enough values
+8.
+8.1.
+SQL> CREATE USER bensaidsondes IDENTIFIED BY 1234
+DEFAULT TABLESPACE users 
+QUOTA UNLIMITED ON users
+TEMPORARY TABLESPACE temp;
+
+SQL> GRANT CONNECT TO bensaidsondes;
+
+
+8.2.
+SQL>CREATE OR REPLACE VIEW Vinfo_mon_profil(Numero,Nom, Prenom, Telephone, Statut, Email, NUMCIN)
+AS SELECT *
+FROM adherent
+WHERE UPPER((nomadh||prenomadh))=UPPER(user);
+8.3.
+
+SQL> GRANT SELECT, UPDATE (telephone, email)ON Vinfo_mon_profil TO PUBLIC;
+9.
+9.1. 
+SQL> SELECT * FROM courssgbd.Vinfo_mon_profil;
+9.1. 
+SQL>UPDATE courssgbd.Vinfo_mon_profil SET telephone=97666333; 
+SQL> SELECT * FROM courssgbd.Vinfo_mon_profil;
+
+
+10.
+SQL> CREATE OR REPLACE VIEW GESTASSOS_contraintes 
+AS SELECT t.table_name, table_type, a.column_name, data_type, c2.constraint_name, constraint_type, search_condition
+FROM USER_CONS_COLUMNS c1, USER_CATALOG t, USER_TAB_COLUMNS a, USER_CONSTRAINTS c2
+WHERE c1.table_name = t.table_name
+AND c1.table_name=a.table_name AND c1.column_name=a.column_name
+AND c1.constraint_name=c2.constraint_name
+ORDER BY t.table_name, a.column_name, c2.constraint_name; 
+
+SQL>SELECT * FROM GESTASSOS_contraintes;
+
+
+
+
+

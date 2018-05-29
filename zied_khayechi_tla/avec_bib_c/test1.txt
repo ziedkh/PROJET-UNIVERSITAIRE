@@ -1,0 +1,25 @@
+DEFINE A1 3
+
+main(){
+
+printf(donner,(A3));       
+scanf("%d%",A3);
+printf(donner,(A2));       
+scanf(A2);
+
+printf(calculer,(A2+(3*A1)/(-5)));
+
+
+ if(A3==A2)
+ {
+ printf(egalite);
+ }else{
+       while(A3<=A2)
+       {
+        printf(operation,(A2));
+       }
+       printf(zied,khayechi);
+       scanf(INFO_B);
+  }
+
+}<<EOF>>

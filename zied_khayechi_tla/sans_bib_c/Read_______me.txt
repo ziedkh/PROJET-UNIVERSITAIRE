@@ -1,0 +1,13 @@
+
+
+
+
+MODIFIACATION AU NIVEAU DU GRAMMAIRE:
+* 
+*	LECTURE : lire parouv ident  parfer pointvirg
+*		|lire parouv AJOUT ident  parfer pointvirg       =====>> INSTRUCTION LU : 
+*	; 									lire("%d",A3);
+*	AJOUT : cot por lettre por cot virg 
+*	;
+*
+*************************************************************

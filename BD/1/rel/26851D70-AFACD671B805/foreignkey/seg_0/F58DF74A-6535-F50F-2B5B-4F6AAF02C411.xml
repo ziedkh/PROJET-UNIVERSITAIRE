@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F58DF74A-6535-F50F-2B5B-4F6AAF02C411" containerWithKeyObject="0245C05B-3B1C-6497-8490-625314ED2DC6" localFKIndex="D4A89585-D053-06E9-DD89-A1200390AAD8" name="FK_EXEMPLAIRES_OUVRAGES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>FK_EXEMPLAIRES_OUVRAGES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:05 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<referredTableLongName>ZIED.OUVRAGES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7D1054B4-DAC3-3EE2-3BD0-044A7F0CF271</referredTableID>
+<keyObject>C4243A07-2E3A-E4B5-4FB0-49E7DB0E5CF3</keyObject>
+<referredKeyID>C4243A07-2E3A-E4B5-4FB0-49E7DB0E5CF3</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ISBN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

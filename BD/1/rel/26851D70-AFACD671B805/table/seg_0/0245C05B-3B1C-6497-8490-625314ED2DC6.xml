@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0245C05B-3B1C-6497-8490-625314ED2DC6" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="EXEMPLAIRES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>EXEMPLAIRES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMEXEMP" id="21F9A7B8-2207-AEE5-AD11-6724F64EB6E6">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EXEMPLAIRES</sourceObjSchema>
+<sourceObjName>NUMEXEMP</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISBN" id="EE587B7E-BACB-81C4-AEE8-249654236BEF">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EXEMPLAIRES</sourceObjSchema>
+<sourceObjName>ISBN</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F58DF74A-6535-F50F-2B5B-4F6AAF02C411" referredColumn="E5B07408-6DBA-93C1-F852-8B8E37557C6E"/>
+</associations>
+</Column>
+<Column name="ETAT" id="6905234E-CF67-BE62-1EA6-A281CA109D0C">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EXEMPLAIRES</sourceObjSchema>
+<sourceObjName>ETAT</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATEACHAT" id="3DB166D1-1050-728E-C156-84679DC80367">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EXEMPLAIRES</sourceObjSchema>
+<sourceObjName>DATEACHAT</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DISPONIBLE" id="7A13867A-542E-FB4C-419E-8849FBA028F3">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>EXEMPLAIRES</sourceObjSchema>
+<sourceObjName>DISPONIBLE</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C12D5E2-218F-5F86-2260-BCAB6FCEA50F" name="PK_EXEMPLAIRES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EXEMPLAIRES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21F9A7B8-2207-AEE5-AD11-6724F64EB6E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70229B50-9223-C0FB-B63E-67B40AED7896" schemaObject="C9FCA0F9-0EE2-DFE4-4A24-6568D2795572" name="PK_EXEMPLAIRES">
+<sourceConnName>zied</sourceConnName>
+<sourceObjSchema>ZIED</sourceObjSchema>
+<sourceObjName>PK_EXEMPLAIRES</sourceObjName>
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21F9A7B8-2207-AEE5-AD11-6724F64EB6E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4A89585-D053-06E9-DD89-A1200390AAD8" name="FK_EXEMPLAIRES_OUVRAGES">
+<createdBy>ASUSS</createdBy>
+<createdTime>2018-05-10 07:49:05 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE587B7E-BACB-81C4-AEE8-249654236BEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

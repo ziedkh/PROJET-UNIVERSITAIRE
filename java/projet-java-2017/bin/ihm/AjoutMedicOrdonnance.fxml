@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutMedicOrdonnanceController">
+   <center>
+      <ListView fx:id="list" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <Button mnemonicParsing="false" onAction="#ajout" text="Ajouter" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
