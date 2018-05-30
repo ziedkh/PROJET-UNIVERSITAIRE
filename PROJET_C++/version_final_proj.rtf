@@ -1,0 +1,2237 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang12 main \line\line\line #include<iostream>\par
+#include"Header.h"\par
+#include<fstream>\par
+#include<vector>\par
+#include<dos.h>\par
+#include<windows.h>\par
+#include<time.h>\par
+#include <string>\par
+using namespace std;\par
+\par
+\par
+void main()\par
+\{\par
+   system("mkdir c:\\\\projet");\par
+\tab system("cls");\par
+\tab system("color D1");\par
+\tab system("cls");\par
+\tab char tmpbuf[128], datebuf[128];\par
+\par
+\tab _strtime_s(tmpbuf);\par
+\par
+\tab _strdate_s(datebuf);\par
+\tab cout << " \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n                                                         B"; Sleep(100); cout << "I"; Sleep(100); cout << "E"; Sleep(100); cout << "N"; Sleep(100); cout << "V";  Sleep(100); cout << "E"; Sleep(100); cout << "N"; Sleep(100); cout << "U         \\n                                                          "; cout << " <>";   Sleep(900); cout << "<>  "; Sleep(900); cout << "\\n\\n                                                   "; cout << tmpbuf<< "  "; cout << datebuf;cout <<" \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n ";\par
+\par
+\tab Sleep(3000);\par
+\tab\par
+\par
+\tab system("cls");\par
+\tab cout << "\\n\\n ";\par
+\tab\par
+\tab cout <<"\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0";\par
+\par
+\tab printf("\\n\\xba %s \\xba\tab\tab       \\xba     PROJET       \\xba \tab\tab    \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab cout << "\\xc8";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab cout << "\\xbc";\par
+\tab cout << "\\n\\n";\par
+\par
+\par
+\par
+\tab cout << "\\n                               \\xda\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xbf";\par
+\tab cout << "\\n                               \\xb3 jardin d'enfant \\xb3";\par
+\tab cout << "\\n                               \\xc0\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xc4\\xd9";\par
+\par
+\tab cout << "\\n\\n";\par
+\par
+\par
+\par
+\tab cout << "\\n               \\xc9\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xbb";\par
+\tab cout << "\\n               \\xba                                              \\xba";\par
+\tab cout << "\\n               \\xba                 ATTENTION:                   \\xba";\par
+\tab cout << "\\n               \\xba       Pour effectuer des operations          \\xba";\par
+\tab cout << "\\n               \\xba       dans cette jardin d'enfant,            \\xba";\par
+\tab cout << "\\n               \\xba    vous devez avoir le mot de passe          \\xba";\par
+\tab cout << "\\n               \\xba         Si non aucune modification           \\xba";\par
+\tab cout << "\\n               \\xba              n'est permise                   \\xba";\par
+\tab cout << "\\n               \\xba                                              \\xba";\par
+\tab cout << "\\n               \\xc8\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xbc" << endl;\par
+\par
+\par
+\par
+\tab int choix, choix1 , choix2 ,choix3 ,choix4 , choix5;\par
+\tab int mdp, pass = 1234;\par
+\tab lister_inscri <enfant > e;\par
+\tab lister_inscri<parent> p;\par
+\tab lister_inscri<employ\'e9s> em;\par
+\tab bilan_medicale bm;\par
+\tab parent pr;\par
+\tab jardin j;\par
+\tab f\'eate_vacances f;\par
+\tab repas Rp;\par
+\tab fstream fp;\par
+\tab module m;\par
+\tab fstream fe;\par
+\par
+\par
+\tab\par
+\tab fstream f1, f2, f3,f4;\par
+\tab\par
+\tab do\par
+\par
+\tab\{\par
+\tab\tab cout << "\\n Entrer votre mot de passe: " << endl;\par
+\tab\tab cin >> mdp;\par
+\par
+\tab\tab if (mdp != pass) cout << " \\n ATTENTION: \\n\\n      Votre mot de passe est incorrect! Veuillez resaisir de nouveau \\n " << endl;\par
+\tab\} while (mdp != pass);\par
+Menu1:\par
+\par
+\tab\par
+\tab\par
+\tab system("cls");\par
+\tab cout << "\\xc9";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab cout << "\\xbb";\par
+\tab\par
+\tab printf("\\n\\xba %s \\xba\tab\tab       \\xba     JARDIN        \\xba \tab\tab    \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab cout << "\\xc8";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab cout << "\\xbc";\par
+\par
+\tab cout << "\\n\\n";\par
+\par
+\tab cout << "                              \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\tab cout << "\\n                            \'b0 1)   *****               inscription                    ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 2)   *****\tab     Afficher la liste des inscrits       ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 3)   *****                s\'e9curit\'e9                      ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 4)   *****              paiment_parent                  ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 5)   *****               salaire_employer               ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 6)   *****          F\'eate & Vacances                     ***** \'b0"<< endl;\par
+\tab cout << "\\n                            \'b0 7)   *****          programme d'etudes                  ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 8)   *****          MENU _REPAS                         ***** \'b0" << endl;\par
+\tab cout << "\\n                            \'b0 9)  *****                  Exit                        ***** \'b0" << endl;\par
+\tab cout << "                             \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\par
+\tab cin >> choix1;\par
+\tab switch (choix1)\par
+\tab\{\par
+\tab case 1: \{\par
+\par
+\tab\tab system("cls");\par
+\tab\tab cout << "\\xc9";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab cout << "\\xbb";\par
+\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xba     JARDIN        \\xba \tab\tab    \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab\tab\par
+\par
+\tab\tab cout << "\\xc8";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab cout << "\\n\\n";\par
+\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n";\par
+\tab\tab cout << "                        \'b0    [1]inscription Enfant\\n";\par
+\tab\tab cout << "\tab                      \'b0    [2]inscription Parent\\n ";\par
+\tab\tab cout << "                        \'b0    [3]inscription Employer\\n";\par
+\tab\tab cout << "\tab                      \'b0    [0]Retourner au Menu Principal\\n";\par
+\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\tab\tab cin >> choix2;\par
+\par
+\tab\tab\par
+\tab\tab if (choix2 == 1)\par
+\tab\tab\{\par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "                                      \'b0    [1]inscription Enfant\\n";\par
+\tab\tab     \par
+         \tab e.inscri_personne();\par
+         \tab\par
+\tab         bm.set_nbr_maladie();\par
+\tab         bm.ajouterMaladie();\par
+\tab\tab\tab\par
+\tab\tab\par
+\par
+\tab\tab\}\par
+\tab\tab else if (choix2 == 2)\par
+\tab\tab\{ \par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "\tab                 \'b0    [2]inscription Parent \\n ";\par
+\tab\tab\tab\par
+\tab\tab\tab j.inscri_parent();\par
+\tab\tab\tab cout << "\\n num\'e9ro de t\'e9lephone: " << endl;\par
+\tab\tab\tab double TT;\par
+\tab\tab\tab cin >> TT;\par
+\tab\tab\tab\par
+\tab\tab\tab pr.set_t\'e9l(TT);\par
+\tab\tab\tab\par
+\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab else\tab  if (choix2 == 3)\par
+\tab\tab\{\par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "                   \'b0    [3]inscription Employer  \\n";\par
+\tab\tab\tab\par
+\tab\tab\tab\par
+\tab\tab\tab j.inscri_employer();\par
+\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab else\tab if (choix2 == 0)\par
+\tab\tab\{\par
+\tab\tab\tab goto Menu1;\par
+\par
+\tab\tab\}\par
+\tab\tab else\par
+\tab\tab\{\par
+\tab\tab\tab cout << "vous devez pr\'e9ciser un choix parmi celle qui exit dans la liste pr\'e9cedante\\n ";\par
+\tab\tab\tab goto Menu1;\par
+\tab\tab\}\par
+\tab\tab cout << "voulez devez retourner au menu principale ==> tapez 0";\par
+\tab\tab int s;\par
+\tab\tab cin >> s;\par
+\tab\tab if (s == 0)\par
+\tab\tab\tab goto Menu1;\par
+\tab\tab break;\par
+\par
+\tab\}\par
+\par
+\tab case 2: \{\par
+\tab\tab system("cls");\par
+\tab\tab cout << "\\xc9";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab cout << "\\xbb";\par
+\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN D'ENFANT  \\xba         \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\par
+\tab\tab cout << "\\xc8";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab cout << "\\n\\n";\par
+\tab\tab cout << "                       \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n";\par
+\tab\tab cout << "                       \'b0    [1]liste des  Enfant\\n ";\par
+\tab\tab cout << "\tab                     \'b0    [2]liste des Parent \\n  ";\par
+\tab\tab cout << "                       \'b0    [3]liste des Employer \\n   ";\par
+\tab\tab cout << "\tab                     \'b0    [0]Retourner au Menu Principal \\n";\par
+\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\par
+\tab\tab cin >> choix3;\par
+\tab\tab\par
+\par
+\tab\tab switch (choix3)\par
+\tab\tab\{\par
+\tab\tab case 1:\par
+\tab\tab\{\par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "                       \'b0    [1]liste des  Enfant\\n ";\par
+\tab\tab\tab\par
+\tab\tab\tab e.lister_personne();\par
+\tab\tab\par
+\tab\tab\tab bm.afficherMaladie();\par
+\tab\tab\tab\par
+\tab\tab\tab e.copie_afficher_fichier();\par
+\tab\tab\tab fstream f;\par
+\tab\tab\tab bm.cree(f);\par
+\tab\tab\tab bm.maladie_Fichiers(f);\par
+\tab\tab\tab bm.afficher_Fichiers(f);\par
+\tab\tab\tab\par
+\par
+\tab\tab break;\par
+\tab\}\par
+\tab\tab case 2:\par
+\tab\tab\{\par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "\tab                     \'b0    [2]liste des Parent \\n  ";\par
+\tab\tab\tab\par
+\par
+\tab\tab\tab j.lister_parent();\par
+\par
+\tab\tab\tab try \{\par
+\tab\tab\tab cout << "num de telephone \\n";\par
+\tab\tab\tab\par
+\tab\tab\tab double num = pr.num_t\'e9l(pr.get_t\'e9l());\par
+\tab\tab\tab cout << num << endl;\par
+\tab\tab\tab\}\par
+\tab\tab\tab catch (int e) \{\par
+\par
+\tab\tab\tab printf ( "le num\'e9ro est invalide , vous devez reintroduire les informations \\n ") ;\par
+\par
+\tab\tab\tab\}\par
+\tab\tab\tab e.copie_afficher_fichier();\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab case 3:\par
+\tab\tab\{\par
+\tab\tab\tab system("cls");\par
+\tab\tab\tab cout << "                       \'b0[3]liste des Employer \\n   ";\par
+\par
+\tab\tab\tab e.lister_personne();\par
+\tab\tab\tab e.copie_afficher_fichier();\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab case 0:\par
+\tab\tab\{\par
+\par
+\tab\tab\tab goto Menu1;\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab default:\par
+\tab\tab\{\par
+\tab\tab\tab cout << "vous devez pr\'e9ciser un choix parmi celle qui exit dans la liste pr\'e9cedante\\n ";\par
+\tab\tab\}\par
+\par
+\tab\tab\}\par
+\tab\tab cout << "voulez devez retourner au  menu principale ==> tapez 0";\par
+\tab\tab int s;\par
+\tab\tab cin >> s;\par
+\tab\tab if (s == 0)\par
+\tab\tab\tab goto Menu1;\par
+\tab\tab break;\par
+\par
+\tab\}\par
+\tab\tab\tab case 3: \{\par
+\tab\tab\tab\tab system("cls");\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN D'ENFANT  \\xba         \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab\tab cout << "\\n\\n\\n";\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab j.securite();\par
+\tab\tab\tab\tab cout << "voulez vous retourner a la menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab\tab if( s == 0 )\par
+\tab\tab\tab\tab goto Menu1;\par
+\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 4: \{\par
+\tab\tab\tab\tab system("cls");\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN D'ENFANT  \\xba         \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab\tab cout << "\\n\\n";\par
+\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab j.paiement();\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab cout << "vous devez retourner au menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab if (s == 0)\par
+\tab\tab\tab\tab\tab goto Menu1;\par
+\tab\tab\tab\tab break;\par
+\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 5:\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab system("cls");\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN D'ENFANT  \\xba         \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab\tab cout << "\\n\\n";\par
+\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab j.salaire();\par
+\tab\tab\tab\tab cout << "vous devez  retourner au menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab if (s == 0)\par
+\tab\tab\tab\tab\tab goto Menu1;\par
+\tab\tab\tab\tab break;\par
+\par
+\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 6:\par
+\tab\tab\tab\{\par
+\tab\tab\tab Menu2:\tab system("cls");\tab\tab\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN D'ENFANT  \\xba           \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab cout << "\\n\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [1]Ajouter\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [2]Afficher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [3]Rechercher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [4]Supprimer\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [5]Fichier\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [0]Retourner au Menu Principal\\n";\par
+\tab\tab\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\par
+\tab\tab\tab\tab cin >> choix4;\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab switch (choix4)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab case 1: \{  f.ajouter_evt();  Sleep(1000); goto Menu2; \}\par
+\tab\tab\tab\tab case 2: \{   f.afficher_evt();  Sleep(1000); goto Menu2;  \}\par
+\tab\tab\tab\tab case 3: \{\par
+\tab\tab\tab\tab\tab cout << "Donner l'evenement" << endl;\par
+\tab\tab\tab\tab\tab string evt;\par
+\tab\tab\tab\tab\tab cin >> evt;\par
+\tab\tab\tab\tab\tab int i =f.rechercher_evt(evt);\par
+\tab\tab\tab\tab\tab if (i == -1) cout << "l'evenement n'existe pas dans la liste des \'e9venement \\n ";\par
+\tab\tab\tab\tab\tab else cout << "l'\'e9venement existe dans la liste \\n ";\par
+\tab\tab\tab\tab\tab Sleep(2000);\par
+\tab\tab\tab\tab\tab  goto Menu2; \}\par
+\tab\tab\tab\tab case 4: \{  f.supprimer_evt(); Sleep(1000);  goto Menu2; \}\par
+\tab\tab\tab\tab case 5: \{\par
+\tab\tab\tab\tab\tab fstream f1;\par
+\tab\tab\tab\tab\tab f.cree_evt(f1);\par
+\tab\tab\tab\tab\tab f.evt_Fichiers(f1);\par
+\tab\tab\tab\tab\tab Sleep(1000);\par
+\tab\tab\tab\tab\tab goto Menu2;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab case 0: \{ Sleep(1000);  goto Menu1; \}\par
+\tab\tab\tab\tab default: \{cout << "vous devez pr\'e9ciser un choix parmi celle qui exit dans la liste pr\'e9cedante\\n ";\par
+\tab\tab\tab\tab  \}\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab cout << "vous devez retourner au  menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab if (s == 0) goto Menu1;\par
+\tab\tab\tab\tab break;\par
+\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 7:\par
+\tab\tab\tab\{\par
+\tab\tab\tab Menu4:\tab system("cls");\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN   \\xba           \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab\tab cout << "\\n\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [1]Ajouter\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [2]Afficher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [3]Rechercher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [4]Supprimer\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [5]Fichier\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [0]Retourner au Menu Principal\\n";\par
+\tab\tab\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\par
+\tab\tab\tab\tab cin >> choix5;\par
+\tab\tab\tab\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\par
+\par
+\tab\tab\tab\tab switch (choix5)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab case 1: \{ m.saisir(); Sleep(1000); goto Menu4; \}\par
+\tab\tab\tab\tab case 2: \{  m.afficherle\'e7on();\par
+\tab\tab\tab\tab\tab Sleep(1000); goto Menu4;  \}\par
+\tab\tab\tab\tab case 3: \{\par
+\par
+\tab\tab\tab\tab\tab m.rechercherle\'e7on();\par
+\tab\tab\tab\tab\tab Sleep(2000);\par
+\tab\tab\tab\tab\tab goto Menu4; \}\par
+\tab\tab\tab\tab case 4: \{ \tab m.supprimerle\'e7on(); Sleep(1000);  goto Menu4; \}\par
+\tab\tab\tab\tab case 5: \{\par
+\tab\tab\tab\tab\tab m.creation_le\'e7on(fe);\par
+\tab\tab\tab\tab\tab m.le\'e7on_Fichiers(fe);\par
+\par
+\tab\tab\tab\tab\tab Sleep(1000);\par
+\tab\tab\tab\tab\tab goto Menu4;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab case 0: \{ Sleep(1000);  goto Menu1; \}\par
+\tab\tab\tab\tab default: \{cout << "vous devez pr\'e9ciser un choix parmi celle qui exit dans la liste pr\'e9cedante\\n ";\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab cout << "vous devez retourner au  menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab if (s == 0) goto Menu1;\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 8:\par
+\tab\tab\tab\{\par
+\tab\tab\tab Menu3:\tab system("cls");\par
+\tab\tab\tab\tab cout << "\\xc9";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcb\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\par
+\tab\tab\tab\tab cout << "\\xbb";\par
+\tab\tab\tab\tab printf("\\n\\xba %s \\xba\tab\tab       \\xbaJARDIN   \\xba           \\xba %s \\xba\\n", tmpbuf, datebuf);\par
+\tab\tab\tab\tab cout << "\\xc8";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xca\\xcd";\par
+\tab\tab\tab\tab cout << "\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd\\xcd";\par
+\tab\tab\tab\tab cout << "\\xbc";\par
+\par
+\tab\tab\tab\tab cout << "\\n\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [1]Ajouter\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [2]Afficher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [3]Rechercher\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [4]Supprimer\\n";\par
+\tab\tab\tab\tab cout << "                       \'b0    [5]Fichier\\n";\par
+\tab\tab\tab\tab cout << "\tab                     \'b0    [0]Retourner au Menu Principal\\n";\par
+\tab\tab\tab\tab cout << "                        \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\par
+\tab\tab\tab\tab cin >> choix4;\par
+\par
+\tab\tab\tab\tab switch (choix4)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab case 1: \{  Rp.ajouter(); Sleep(1000); goto Menu3; \}\par
+\tab\tab\tab\tab case 2: \{  Rp.afficher();\par
+\tab\tab\tab\tab\tab Sleep(1000); goto Menu3;  \}\par
+\tab\tab\tab\tab case 3: \{\par
+\par
+\tab\tab\tab\tab\tab Rp.rechercher();\par
+\tab\tab\tab\tab\tab Sleep(2000);\par
+\tab\tab\tab\tab\tab goto Menu3; \}\par
+\tab\tab\tab\tab case 4: \{  Rp.supprimer(); Sleep(1000);  goto Menu3; \}\par
+\tab\tab\tab\tab case 5: \{\par
+\tab\tab\tab\tab\tab Rp.cree_repas(fp);\par
+\tab\tab\tab\tab\tab Rp.repas_Fichiers(fp);\par
+\tab\tab\tab\tab\tab ;\par
+\tab\tab\tab\tab\tab Sleep(1000);\par
+\tab\tab\tab\tab\tab goto Menu3;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab case 0: \{ Sleep(1000);  goto Menu1; \}\par
+\tab\tab\tab\tab default: \{cout << "vous devez pr\'e9ciser un choix parmi celle qui exit dans la liste pr\'e9cedante\\n ";\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab cout << "vous devez retourner au  menu principale ==> tapez 0";\par
+\tab\tab\tab\tab int s;\par
+\tab\tab\tab\tab cin >> s;\par
+\tab\tab\tab\tab if (s == 0) goto Menu1;\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\tab case 9:\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab exit(1); break;\par
+\tab\tab\tab\}\par
+\tab\tab\tab\par
+\par
+\tab\}\par
+\tab system("PAUSE");\par
+\}\par
+/////////////////////////////////////////////////////////////////////////////////////\line  .h \line\line\line\line\line\line #pragma once\par
+#include <iostream>\par
+#include<fstream>\par
+\par
+#include <vector>\par
+using namespace std;\par
+#include<string>\par
+\par
+\par
+class  Date\par
+\{\par
+protected:\par
+\par
+\tab int jour;\par
+\tab int mois;\par
+\tab int annee;\par
+\par
+\par
+public:\par
+\tab Date(int = 01, int = 01, int = 2000);\par
+\tab friend istream& operator >> (istream&, Date&);\par
+\tab friend ostream& operator<<(ostream&, Date&);\par
+\tab  virtual ~Date(void);\par
+\tab  void saisir_date();\par
+\tab  void afficher_date();\par
+\par
+\tab void setJour(int j) \{ jour = j; \}\par
+\tab void setMois(int m) \{ mois = m; \}\par
+\tab void setAnnee(int a) \{ annee = a; \}\par
+\tab int getJour() \{ return jour; \}\par
+\tab int getMois() \{ return mois; \}\par
+\tab int getAnnee() \{ return annee; \}\par
+\};\par
+class maladie\par
+\{\par
+\par
+\tab string nom_maladie;\par
+\tab string description;\par
+\tab string m\'e9dicament;\par
+\par
+\par
+public:\par
+\tab maladie(string = "", string = "", string="");\par
+\tab void saisir();\par
+\tab void afficher();\par
+\tab string getMaladie() \{ return nom_maladie; \}\par
+\tab string getMed() \{ return m\'e9dicament; \}\par
+\tab friend istream& operator >> (istream&, maladie&); \par
+\tab friend ostream& operator<< (ostream&, maladie&); \par
+\tab ~maladie() \{\};\par
+\};\par
+\par
+class bilan_medicale \par
+\{\par
+protected:\par
+\tab int age;\par
+\tab  int nbr_maladie=1;\par
+\tab vector <maladie*> tab_maladie;\par
+\tab\par
+public:\par
+\tab bilan_medicale(int =3 ,int= 0);\par
+\tab virtual ~bilan_medicale() \{\};\par
+\tab void ajouterMaladie();\par
+ void  rechercherMaladie( string ="");\par
+    void afficherMaladie();\par
+\par
+\tab void supprimerMaladie( int);\par
+    void cree(fstream&);\par
+\tab void maladie_Fichiers(fstream&);\par
+\tab void afficher_Fichiers(fstream &);\par
+\tab void set_age()\par
+\tab\{\par
+\tab\tab int a;\par
+\tab\tab cout << "donner l'age ";\par
+\tab\tab cin >> a; \par
+\tab\tab age = a;\par
+\tab\}\par
+\tab void set_nbr_maladie()\par
+ \{\par
+\tab\tab int a;\par
+\tab\tab cout << "donner le nombres des maladies "; \par
+\tab\tab cin >> a;\par
+\tab\tab nbr_maladie = a;\par
+\tab\}\par
+\};\par
+\par
+class personne \par
+\{   \par
+protected:\par
+\par
+\tab string nom;\par
+\tab string pr\'e9nom;\par
+\tab Date date;\par
+\tab  int num_inscription=0000;\par
+public :\par
+\tab personne(string = "", string = "", int = 0, int = 00, int = 0000, int = 000);\par
+\tab  virtual void saisir();\par
+\tab  virtual void afficher();\par
+\par
+\tab\par
+\tab friend istream& operator >> (istream&, personne&);\par
+\tab friend ostream& operator<< (ostream&, personne&); \par
+\par
+\tab int get_num_inscription() \{ return(num_inscription); \}\par
+\tab friend class Date;\par
+\tab string get_nom()\{ return nom; \}\par
+\tab  virtual ~personne() \{\};\par
+\par
+\par
+\};\par
+ \par
+class enfant : public personne ,public bilan_medicale\par
+\{\par
+\par
+\tab string classe;\par
+\tab string genre; \par
+\par
+    public :\par
+\tab\tab\par
+\tab\tab enfant( string="", string ="",  string = "", string = "" ,int= 0, int =0,int=0, int=0 );\par
+\tab\tab  virtual void saisir();\par
+\tab\tab  virtual void afficher();\par
+\tab\tab ~enfant() \{\};\par
+\par
+\tab\tab\par
+\par
+\};\par
+class parent  :   public personne \par
+\{\par
+protected:\par
+\tab string lien;\par
+\tab string adresse;\par
+\tab long  t\'e9l=00000000;\par
+\tab  float montant_mois=40.0;\par
+\tab string e_mail;\par
+\tab string travail;\par
+\tab vector< int >tab_pay;\par
+\tab\par
+\par
+public:\par
+\tab parent (string ="", string="", string="", string="", string="", string="",int=0, int=00, int=0000, int=0 ,long=000 ,float=0.0 );\par
+\tab  virtual void saisir();\par
+\tab  virtual void afficher();\par
+\tab void set_t\'e9l(long l) \{ t\'e9l = l; \}\par
+    long  get_t\'e9l() \{ return(t\'e9l); \}\par
+\tab long num_t\'e9l(long t\'e9l)\par
+\tab\{\par
+\tab\tab if (t\'e9l >= 1000000)  throw (-1);\par
+\tab\tab return (t\'e9l);\par
+\tab\}\par
+\tab float get_montant_mois() \{ return montant_mois; \}\par
+   virtual  ~parent() \{\};\par
+\par
+\tab\par
+\tab\par
+\};\par
+\par
+\par
+\par
+class employ\'e9s :  public personne\par
+\{\par
+protected:\par
+\tab string  poste; // femme de m\'e9nage , animateur (animatrice) , encadrement \par
+\tab\tab\tab\tab    //psychologique .......\par
+\tab string mode_emplois;\par
+\tab long  t\'e9l;\par
+\tab float salaire_mois;\par
+\tab string e_mail;\par
+\tab int num_cin;\par
+\tab vector< int >tab_salaire;\par
+\par
+\par
+public :\par
+\tab employ\'e9s(string="", string="", string="", string="",  string = "" ,int=0, int=0, int=0, int=0, long=000, float=0.0,int =0);\par
+\tab void set_mode_emplois() \{\par
+\tab\tab string a;\par
+\tab\tab cout << "donner le mode d'emploi==>   jour , s\'e9ance , heure " << endl; cin >> a;\par
+\tab\tab mode_emplois = a;\par
+\tab\}\par
+\tab void set_salaire_mois() \{\par
+\tab\tab float sal;\par
+\tab\tab cout << "donner la montant a payer chaque mois " << endl;\par
+\tab\tab cin >> sal;\par
+\tab\tab salaire_mois = sal;\par
+\tab\}\par
+\tab\par
+\tab string  get_mode_emploi() \{ return mode_emplois; \}\par
+\tab float get_salaire_mois() \{ return salaire_mois; \}\par
+int  get_num_cin() \{ return num_cin; \}\par
+\par
+\tab  virtual void saisir();\par
+\tab  virtual void afficher();\par
+\tab\par
+\tab  virtual ~employ\'e9s() \{\};\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\par
+\};\par
+\par
+\par
+class f\'eate_vacances \par
+\{\par
+\tab vector <string *> tab_evt ;\par
+public :\par
+\tab f\'eate_vacances() \{\};\par
+\tab  void   ajouter_evt();\par
+\tab  int  rechercher_evt(string = "");\par
+\tab  void afficher_evt();\par
+\tab  void supprimer_evt();\par
+\par
+   void cree_evt(fstream&);\par
+\tab void evt_Fichiers(fstream&);\par
+\par
+\tab\par
+\};\par
+\par
+\par
+class jardin :public parent ,public employ\'e9s\par
+\{\par
+\tab\par
+\tab vector<enfant*> tab1;\par
+\tab vector<parent*> tab2;\par
+\tab\par
+\tab vector<employ\'e9s*> tab3;\par
+public:\par
+\tab jardin() \{\};\par
+\tab int recherche_parent();\par
+\tab int  recherche_employer();\par
+\tab void  securite();\par
+\par
+\tab void inscri_parent()\par
+\tab\{\par
+\tab\tab parent *per = new parent();\par
+\tab\tab tab2.push_back(per);\par
+\tab\tab cout << " \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0introduire les donne\'e9es\\n " << endl;\par
+\tab\tab per->saisir();\par
+\par
+\tab\}\par
+\tab void inscri_employer()\par
+\tab\{\par
+\tab employ\'e9s *per = new employ\'e9s();\par
+\tab\tab tab3.push_back(per);\par
+\tab\tab cout << " \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0introduire les donne\'e9es\\n " << endl;\par
+\tab\tab per->saisir();\par
+\par
+\tab\}\par
+\tab void  lister_parent()\par
+\tab\{\par
+\tab\tab for (int i = 0; i < tab2.size(); i++)\par
+\tab\tab\tab tab2[i]->afficher();\par
+\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+\tab\}\par
+\tab void  lister_employer()\par
+\tab\{\par
+\tab\tab for (int i = 0; i < tab3.size(); i++)\par
+\tab\tab\tab tab3[i]->afficher();\par
+\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab void paiement();\par
+\tab void salaire();\par
+\par
+  \};\par
+\par
+class le\'e7on\par
+\{\par
+\tab int  num_theme;\par
+\tab string  titre;\par
+\tab int ordre_module;\par
+\tab float horaire_allouer;\par
+\tab int niveau;\par
+\par
+public:\par
+\tab le\'e7on(string = "", int = 0, int = 0, float = 0.0, int = 0);\par
+\tab ~le\'e7on() \{\};\par
+\tab void saisir_lesson();\par
+\tab void afficher();\par
+\tab void set_titre(string  t) \{ titre = t; \}\par
+\tab string get_titre() \{ return titre; \}\par
+\tab int get_num_theme() \{ return num_theme; \}\par
+\tab void set_num_theme(int a) \{ num_theme = a; \}\par
+\par
+\tab friend istream& operator >> (istream&, le\'e7on &);\par
+\tab friend ostream& operator<< (ostream&, le\'e7on &);\par
+\};\par
+class module\par
+\{\par
+\par
+\par
+\par
+\tab vector <le\'e7on*>tab_le\'e7on;\par
+public:\par
+\tab module() \{\};\par
+\par
+\tab virtual ~module(void);\par
+\tab module(const module&);\par
+\tab module&  operator= (module&);\par
+\tab friend istream& operator >> (istream&, module &);\par
+\tab friend ostream& operator << (ostream&, module &);\par
+\par
+\par
+\tab void saisir()\par
+\tab\{\par
+\tab\tab int x, y, s = 0;\par
+\par
+\par
+\par
+\tab\tab cout << "                                Donner le(s) nombre(s) des theme a ajouter \\n " << endl;\par
+\tab\tab cin >> x;\par
+\tab\tab le\'e7on l;\par
+\tab\tab s += x;\par
+\tab\tab l.set_num_theme(s);\par
+\tab\tab for (int i = 0; i < x; i++)\par
+\tab\tab\{\par
+\tab\tab\tab cout << "\\n                                 \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0| theme Ajouter " << i + 1 << "|\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\\n  \\n";\par
+\tab\tab\tab printf("\\n                                 \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0| le\'e7on(s)|\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0 \\n");\par
+\tab\tab\tab cout << "                                Donner le(s) nombre(s) des lecon(s)a ajouter \\n " << endl;\par
+\tab\tab\tab cin >> y;\par
+\tab\tab\tab int k = 0;\par
+\tab\tab\tab while (k < y)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab cout << "\\n                                 _______________________| lecon :" << k + 1 << " |__________________________ \\n";\par
+\tab\tab\tab\tab cout << "\\n                                  donner les caracteristiques du lecon: " << endl;\par
+\tab\tab\tab\tab le\'e7on *l = new le\'e7on;\par
+\tab\tab\tab\tab tab_le\'e7on.push_back(l);\par
+\tab\tab\tab\tab l->saisir_lesson();\par
+\tab\tab\tab\tab k++;\par
+\tab\tab\tab\}\par
+\par
+\par
+\tab\tab\}\par
+\tab\tab cout << "\\n                            cette jardin possed en totalite              :" << l.get_num_theme();\par
+\tab\}\par
+\tab\par
+\tab void  rechercherle\'e7on()\par
+\tab\{\par
+\tab\tab int  x;\par
+\tab\tab cout << "                                Donner le numero du theme  : \\n " << endl;\par
+\tab\tab cin >> x;\par
+\par
+\tab\tab bool ok = false;\par
+\tab\tab for (int i = 0; i < tab_le\'e7on.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab if (tab_le\'e7on[i]->get_num_theme() == x)\par
+\tab\tab\tab\tab ok = true;\par
+\par
+\tab\tab\}\par
+\tab\tab if (ok == true)\par
+\tab\tab\tab cout << "\\n                                la le\'e7on exist dans le jardin \\n ";\par
+\tab\tab else\par
+\tab\tab\tab cout << "\\n                                 la lecon n'existe pas !!!!! \\n";\par
+\par
+\par
+\tab\}\par
+\tab void afficherle\'e7on()\par
+\tab\{\par
+\tab\tab le\'e7on l;\par
+\par
+\tab\tab for (int i = 0; i < tab_le\'e7on.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab tab_le\'e7on[i]->afficher();\par
+\tab\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+\tab\tab\}\par
+\tab\}\par
+\tab void supprimerle\'e7on()\par
+\tab\{\par
+\par
+\tab\tab int x;\par
+\tab\tab cout << "                                Donner le numero de menu que vous voulez supprimer \\n " << endl;\par
+\tab\tab cin >> x;\par
+\par
+\par
+\par
+\tab\tab tab_le\'e7on.erase(tab_le\'e7on.begin() + x - 1);\par
+\tab\tab\par
+\par
+\tab\tab cout << "\\n le theme num\'e9ro : " << x << " a \'e9t\'e9 retire avec succes \\n" << endl;\par
+\par
+\par
+\tab\}\par
+\tab void creation_le\'e7on(fstream& f)\par
+\tab\{\par
+\tab\tab f.open("fichier_prog_etude.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab if (!f.is_open()) exit(-1);\par
+\tab\tab f << "                                 La liste des themes " << endl;\par
+\par
+\tab\tab for (int i = 0; i<tab_le\'e7on.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab f << "\\n theme : " << i + 1 << endl;\par
+\tab\tab\tab f << *tab_le\'e7on[i];\par
+\tab\tab\}\par
+\tab\}\par
+\tab void le\'e7on_Fichiers(fstream& f)\par
+\tab\{\par
+\tab\tab cout << "\\n                                  Affichage du fichier " << endl;\par
+\tab\tab f.seekg(0);\par
+\tab\tab char ch[500];\par
+\tab\tab while (1)\par
+\tab\tab\{\par
+\tab\tab\tab f.getline(ch, 500);\par
+\tab\tab\tab if (f.eof()) break;\par
+\tab\tab\tab cout << ch << endl;\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\};\par
+\par
+\par
+\par
+template <class T>\par
+class lister_inscri :public personne\par
+\{\par
+\tab\par
+\tab vector <T*> tab;\par
+public:\par
+\tab\par
+\tab lister_inscri () \{\};\par
+\tab ~lister_inscri() \{\};\par
+\tab\par
+\tab void  lister_personne()\par
+\tab\{   \par
+\tab\tab for (int i = 0; i < tab.size(); i++)\par
+\tab\tab\tab tab[i]-> afficher();\par
+\tab\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+   \}\par
+\par
+\par
+\tab void inscri_personne()\par
+\tab\{\par
+\tab\tab T *per = new T();\par
+\tab\tab tab.push_back(per);\par
+\tab\tab cout << " \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0introduire les donne\'e9es\\n " << endl;\par
+\tab\tab per->saisir();\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab void copie_afficher_fichier() \par
+\tab\{  \par
+\tab\tab int choix=0;\par
+\tab\tab char ch[101];\par
+\tab     string nom_fich="jardin.txt";\par
+\tab\tab fstream f;  \par
+\tab\tab cout << "\\n          Donner le nom  du fichier :\\n         [1] enfant.txt\\n           [2] parent.txt \\n           [3]employer.txt  \\n" << endl;\par
+\tab\tab cin >> choix;\par
+\tab\tab switch (choix)\par
+\tab\tab\{ \par
+\tab\tab case 1: \{ nom_fich = " enfant.txt"; break; \}\par
+\tab\tab case 2: \{  nom_fich = " parent.txt"; break; \}\par
+\tab\tab case 3: \{ nom_fich = " employer.txt"; break; \}\par
+\par
+\tab\tab default:\par
+\tab\tab\{cout << " \\choix incorrect!!!!\\ n";\par
+\tab\tab break; \}\par
+\tab\tab\}\par
+\tab\par
+\tab\tab f.open(nom_fich, ios::in | ios::out | ios::trunc); \par
+\tab\tab if (!f.is_open()) cout << "\\n erreur" << endl;\par
+\par
+\tab\tab for (int i = 0; i<tab.size(); i++)  \par
+\tab\tab\tab f << *tab[i] << "\\n";\par
+\par
+\tab\tab f.seekp(0); \par
+\tab\tab cout << "\\n                           les informations enregister dans cette fichier sont :" << endl;\par
+\tab\tab while (1)\par
+\tab\tab\{ \par
+\tab\tab\tab f.getline(ch, 100);  \par
+\tab\tab\tab if (f.eof()) break;\par
+\tab\tab\tab cout << ch << endl;\par
+\tab\tab\} \par
+\tab\tab f.close();\par
+\tab\}\par
+\};\par
+\par
+ \par
+\par
+\par
+class repas_journ\'e9e\par
+\{\par
+\tab int num_menu;\par
+\tab string entr\'e9e;\par
+\tab string plat_principale;\par
+\tab string dessert;\par
+public:\par
+\tab repas_journ\'e9e() \{\};\par
+\tab\par
+\tab void saisir_repas();\par
+\tab void afficher_repas();\par
+\tab void modifier_repas();\par
+\tab int get_num_menu() \{ return num_menu; \}\par
+\tab void set_num_menu(int a ) \{ num_menu = a; \}\par
+\tab\par
+\par
+\tab  friend ostream& operator << (ostream& out, repas_journ\'e9e& rp)\par
+\tab\{\par
+\tab\tab out << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le numero du MENU \\n" << rp.num_menu;\par
+\tab\tab out << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le plat d'entr\'e9e \\n" << rp.entr\'e9e;\par
+\tab\tab out << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0 le plat_principale \\n" << rp.plat_principale;\par
+\tab\tab out << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le dessert  \\n" << rp.dessert;\par
+\par
+\par
+\tab\tab return out;\par
+\tab\}\par
+\};\par
+\par
+class repas\par
+\{\par
+\tab vector < repas_journ\'e9e *> tab;\par
+public:\par
+\tab repas() \{\};\par
+\tab void   ajouter( )\par
+\tab\{\par
+\tab\tab int x;\par
+\tab\tab cout << "                                Donner le(s) nombre(s) des menu a ajouter \\n " << endl;\par
+\tab\tab cin >> x;\par
+\par
+\tab\tab for (int i = 0; i < x; i++)\par
+\tab\tab\{\par
+\tab\tab\tab cout << "\\n                                 \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0| MENU |\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0 \\n" << i + 1 << " : ";\par
+\tab\tab\tab repas_journ\'e9e *r = new  repas_journ\'e9e();\par
+\tab\tab\tab\par
+\tab\tab\tab tab.push_back(r);\par
+\tab\tab\tab r->saisir_repas();\par
+\tab\tab\tab\par
+\par
+\tab\tab\}\par
+\tab\};\par
+\tab void  rechercher( )\par
+\tab\{\par
+\tab\tab int x;\par
+\tab\tab cout << "                                Donner le numero de menu que vous voulez chercher \\n " << endl;\par
+\tab\tab cin >> x;\par
+\tab\tab bool ok = false;\par
+\tab\tab for (int i = 0; i<tab.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab if (tab[i]->get_num_menu() == x)\par
+\tab\tab\tab\tab ok = true;\par
+\par
+\tab\tab\}\par
+\tab\tab if (ok == true)\par
+\tab\tab\tab cout << "\\n                                cette repas exist dans le jardin \\n ";\par
+\tab\tab else\par
+\tab\tab\tab cout << "\\n                                cette repas n'existe pas !!!!! \\n";\par
+\tab\}\par
+\tab void afficher()\par
+\tab\{\par
+\tab\tab repas_journ\'e9e rp;\par
+\par
+\tab\tab if (rp.get_num_menu() == 0) cout << "       Cette Jardin ne possed aucun menu!!!!!!\\n";\par
+\par
+\tab\tab for (int i = 0; i<tab.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab tab[i]->afficher_repas();\par
+\tab\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+\tab\tab\}\par
+\tab\}\par
+\tab\par
+\tab void supprimer()\par
+\tab\{\par
+\tab\tab int x;\par
+\tab\tab cout << "                                Donner le numero de menu que vous voulez supprimer \\n " << endl;\par
+\tab\tab cin >> x;\par
+\tab\tab\par
+\tab\tab\par
+\tab\tab\par
+\tab\tab\tab tab.erase(tab.begin() + x-1);\par
+\tab\tab\tab repas_journ\'e9e rp;\par
+\tab\tab\tab rp.set_num_menu(rp.get_num_menu() - 1);\par
+\tab\tab\tab cout << "\\n le menu  num\'e9ro : " << x << " a \'e9t\'e9 retire avec succes \\n" << endl;\par
+\tab\par
+\tab\}\par
+\par
+\tab void cree_repas(fstream& f)\par
+\tab\{\par
+\tab\tab f.open("fichier_repas.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab if (!f.is_open()) exit(-1);\par
+\tab\tab f << "                                 La liste des menu " << endl;\par
+\par
+\tab\tab for (int i = 0; i<tab.size(); i++)\par
+\tab\tab\{\par
+\tab\tab\tab f << "\\n MENU : " << i + 1 << endl;\par
+\tab\tab\tab f  << *tab[i];\par
+\tab\tab\}\par
+\tab\}\par
+\tab void repas_Fichiers(fstream& f)\par
+\tab\{\par
+\tab\tab cout << "\\n                                  Affichage du fichier " << endl;\par
+\tab\tab f.seekg(0);\par
+\tab\tab char ch[500];\par
+\tab\tab while (1)\par
+\tab\tab\{\par
+\tab\tab\tab f.getline(ch, 500);\par
+\tab\tab\tab if (f.eof()) break;\par
+\tab\tab\tab cout << ch << endl;\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\tab\par
+\};\par
+\par
+//////////////////////////////////////////////////////////////////////////\line .cpp\line\line #include <iostream>\par
+\par
+#include<string>\par
+#include<vector>\par
+#include<fstream>\par
+#include"Header.h"\par
+using namespace std;\par
+//\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+\par
+\par
+Date::Date(int j, int m, int a)\par
+\{\par
+\par
+\tab jour = j;\par
+\tab mois = m;\par
+\tab annee = a;\par
+\tab\par
+\}\par
+\par
+void Date::saisir_date()\par
+\{\par
+\tab int j;\par
+\tab cout << "donner le jour" << endl;\par
+\tab cin >> j ;\par
+\tab setJour(j);\par
+\tab int m;\par
+\tab cout << "donner le mois" << endl;\par
+\tab cin >> m;\par
+\tab setMois(m);\par
+\tab int a;\par
+\tab cout << "donner l'ann\'e9e" << endl;\par
+\tab cin >> a;\par
+\tab setAnnee(a);\par
+\}\par
+void Date::afficher_date()\par
+\{\par
+\tab cout << "donner le jour" << getJour() << endl;\par
+\tab cout << "donner le mois" << getMois() << endl;\par
+\tab cout << "donner l'ann\'e9e" << getAnnee() << endl;\par
+\}\par
+istream& operator >> (istream& in, Date& d)\par
+\{\par
+\tab cout << "donner la date :" << endl;\par
+\tab in >> d.jour;\par
+\tab in >> d.mois;\par
+\tab in >> d.annee;\par
+\par
+\tab return in;\par
+\}\par
+\par
+ostream& operator<<(ostream& out, Date& d)\par
+\{\par
+\tab out << d.jour << "/" << d.mois << "/" << d.annee << "     " << endl;\par
+\tab return out;\par
+\}\par
+\par
+\par
+\par
+Date::~Date(void)\par
+\{\par
+\}\par
+//\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+// maladie\par
+\par
+maladie::maladie (string a, string b, string c)\par
+\{\par
+\tab nom_maladie= a ;\par
+\tab description= b ;\par
+\tab m\'e9dicament =c;\par
+\par
+ \}\par
+\par
+void maladie::saisir()\par
+\{\par
+\tab cout << "\\n Le nom du maladie " << endl;\par
+\tab cin >> nom_maladie;\par
+\tab cout << "\\n La decription du maladie" << endl;\par
+\tab cin >> description;\par
+\tab cout << "\\n Les m\'e9dicaments " << endl;\par
+\tab cin >> m\'e9dicament;\par
+\tab cout << "\\n _____________________________________" << endl;\par
+\}\par
+void maladie :: afficher()\par
+\{\par
+\tab cout << "\\n Le nom du maladie " << nom_maladie << endl;\par
+\tab cout << "\\n La decription du maladie " << description << endl;\par
+\tab cout << "\\n Les m\'e9dicaments " << m\'e9dicament<< endl;\par
+\tab cout << "\\n _____________________________________" << endl;\par
+\par
+\}\par
+istream& operator >> (istream& in, maladie& m)\par
+\{\par
+\tab cout << "\\n Le nom du maladie " << endl;\par
+\tab in >> m.nom_maladie;\par
+\tab cout << "\\n La decription du maladie" << endl;\par
+\tab in >> m.description;\par
+\tab cout << "\\n Les m\'e9dicaments " << endl;\par
+\tab in >> m.m\'e9dicament;\par
+\par
+\tab return in;\par
+\}\par
+ostream& operator<< (ostream& out, maladie& m)\par
+\{\par
+\tab out << "\\n Le nom du maladie " << m.nom_maladie << endl;\par
+\tab out << "\\n La decription du maladie " << m.description << endl;\par
+\tab out << "\\n Les m\'e9dicaments " << m.m\'e9dicament << endl;\par
+\tab return out;\par
+\}\par
+//\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+//bilan_medicale \par
+bilan_medicale::bilan_medicale(int a , int b )\par
+\{\par
+\tab\par
+\tab age = a;\par
+\tab nbr_maladie = b; \par
+\}\par
+void  bilan_medicale::ajouterMaladie()\par
+\{\par
+\tab //set_nbr_maladie();\par
+\tab for (int i = 0; i <nbr_maladie; i++)\par
+\tab\{\par
+\tab\tab maladie *m = new maladie();\par
+\tab\tab tab_maladie.push_back(m);\par
+\tab\tab m->saisir();\par
+\tab\tab\par
+\par
+\tab\}\par
+\par
+\}\par
+void  bilan_medicale::rechercherMaladie( string choix)\par
+\{\par
+\tab bool ok = false;\par
+\tab for (int i = 0; i<tab_maladie.size(); i++)\par
+\tab\{\par
+\tab\tab if (tab_maladie[i]->getMaladie() == choix)\par
+\tab\tab\tab ok = true;\par
+\tab\tab\tab\par
+\tab\}\par
+\tab if (ok == true)\par
+\tab\tab cout << "\\ncette maladie existe  chez l'enfant\\n ";\par
+    else\par
+    cout << "\\ncette maladie n'existe pas chez l'enfant \\n";\par
+\}\par
+void  bilan_medicale::afficherMaladie()\par
+\{\par
+\tab if (nbr_maladie == 0) cout << "cet enfant n'a aucune maladie\\n";\par
+\tab\par
+\tab for (int i = 0; i<tab_maladie.size(); i++)\par
+\tab\{\par
+\tab\tab tab_maladie[i]-> afficher();\par
+\tab\tab cout << "\\n -------------------------------------------- \\n" << endl;\par
+\tab\}\par
+\par
+\}\par
+void bilan_medicale::supprimerMaladie(int  choix )\par
+\{\par
+\tab tab_maladie.erase(tab_maladie.begin() + choix);\par
+\tab nbr_maladie -= nbr_maladie;\par
+\tab cout << "\\n La maladie num\'e9ro : " << choix  << " a \'e9t\'e9 retire avec succes \\n" << endl;\par
+\}\par
+void  bilan_medicale::cree(fstream& f)\par
+\{\par
+\tab f.open("fichier_bilan_medicale.txt", ios::in | ios::out | ios::trunc);\par
+\tab if (!f.is_open()) exit(-1);\par
+\}\par
+void bilan_medicale::maladie_Fichiers(fstream& f)\par
+\{\tab f << "                                 La liste des maladies  " << endl;\par
+\par
+\tab for (int i = 0; i<tab_maladie.size(); i++)\tab\par
+\tab\{\tab f << "\\n maladie : " << i + 1 << endl;\par
+\tab\tab f << *tab_maladie[i];\par
+\tab\}\par
+\par
+\par
+\}\par
+\par
+void bilan_medicale::afficher_Fichiers(fstream & f)\par
+\{ \par
+\tab cout << "\\n                                  Affichage du fichier " << endl; \par
+\tab f.seekg(0); \par
+\tab char ch[500];\par
+\tab while (1)\par
+\tab\{ \par
+\tab\tab f.getline(ch, 500);  \par
+\tab\tab if (f.eof()) break; \par
+\tab\tab cout << ch << endl; \par
+\tab\}\par
+\}\par
+//\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+//personne\par
+personne ::personne (string a, string b,int c ,int d,  int e , int cc): date (c,d,e)\par
+\{\par
+\tab nom = a;\par
+     pr\'e9nom=b ;\par
+     num_inscription=cc;\par
+\par
+\}\par
+void personne::saisir()\par
+\{\par
+\tab cout << "\\n Le nom  " << endl;\par
+\tab cin >> nom;\par
+\tab cout << "\\n Le prenom  " << endl;\par
+\tab cin >> pr\'e9nom;\par
+\par
+\tab cout << "\\n Le numero d'inscription (unique )" << endl;\par
+\tab cin >> num_inscription;\par
+\par
+\}\par
+void   personne::afficher()\par
+\{\par
+\tab cout << "\\n Le nom  " <<  nom <<endl;\par
+\tab cout << "\\n Le prenom  " << pr\'e9nom<< endl;\par
+\tab cout << "\\n Le numero d'inscription " << num_inscription<< endl;\par
+\tab cout << "\\n _____________________________________" << endl;\par
+\par
+\}\par
+istream& operator >> (istream& in, personne& p)\par
+\{\par
+\tab cout << "\\n Le nom  " << endl;\par
+\tab in >> p.nom;\par
+\tab cout << "\\n Le prenom  " << endl;\par
+\tab in >> p.pr\'e9nom;\par
+\tab cout << "\\n Le numero d'inscription " << endl;\par
+\tab in >> p.num_inscription;\par
+\tab return in;\par
+ \}\par
+ ostream& operator<< (ostream& out, personne& p)\par
+\{\par
+\tab out << "\\n Le nom  " << p.nom << endl;\par
+\tab out << "\\n Le prenom  " << p.pr\'e9nom << endl;\par
+\tab out << "\\n Le numero d'inscription " << p.num_inscription << endl;\par
+\tab return out;\par
+\}\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ //enfant \par
+ enfant::enfant(string a, string b , string cla, string gnr, int c , int d , int e , int f ): personne (a,b,c,d,e,f)\par
+ \{\par
+\tab  classe = cla;\par
+\tab  genre = gnr;\par
+  \}\par
+ void  enfant::saisir()\par
+ \{\par
+\tab  personne::saisir();\par
+\tab  //int a, b, c;\par
+\tab  cout << "\\n La classe  " << endl;\par
+\tab  cin >> classe ;\par
+\tab  cout << "le genre" << endl;\par
+\tab  cin >> genre;\par
+\tab  cout << "\\n _____________________________________" << endl;\par
+\tab\par
+\par
+ \}\par
+ void  enfant::afficher()\par
+ \{\par
+\tab  personne::afficher();\par
+\tab  cout << "la classe :" << classe << endl;\par
+\tab  cout << "le genre" << genre << endl;\par
+\tab\par
+\tab  cout << "\\n _____________________________________" << endl;\par
+\par
+\par
+\tab  \par
+ \}\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ //parent \par
+ //parent (string ="", string="", string="", string="", string="", string="",int=0, int=00, int=0000, int=0 ,long=000 ,int=0 )\par
+ parent::parent(string a, string aa, string c, string d, string h, string i, int aaa, int b, int bb, int bbb, long e, float f) :personne(a, aa, aaa,b,bb,bbb)//, Date(b, bb, bbb)\par
+ \{\par
+\tab  lien =c;\par
+\tab adresse=d;\par
+\tab t\'e9l = e;\par
+\tab montant_mois =f ;\par
+\tab e_mail =h;\par
+\tab   travail =i;\par
+ \}\par
+ void parent::saisir()\par
+ \{\par
+\par
+\tab  personne::saisir();\par
+\tab  cout << "\\n Le lien  :  " << endl;\par
+\tab  cin >> lien ;\par
+\tab  cout << "\\nl'adresse postale :" << endl;\par
+\tab  cin >> adresse;\par
+\tab  cout << "\\n le montant a payer  par mois :" << endl;\par
+\tab  cin >> montant_mois ;\par
+\tab  cout << "\\n E-mail :" << endl;\par
+\tab  cin >> e_mail;\par
+\tab  cout << "\\n travail :" << endl;\par
+\tab  cin >> travail;\par
+\tab\par
+\tab  //cout << "donner la date d'inscription" << endl;\par
+\tab  /*int a, b, c;\par
+\tab  Date::setJour(a);\par
+\tab  Date::setMois(b);\par
+\tab  Date::setAnnee(c);*/\par
+\tab\par
+\tab\par
+ \}\par
+ void parent::afficher()\par
+ \{ \par
+\tab  personne::afficher();\par
+\tab  cout << "\\n Le lien  :  " << lien<< endl;\par
+\tab\par
+\tab  cout << "\\nl'adresse postale :"<< adresse << endl;\par
+\tab  \par
+\par
+\tab  cout << "\\n le montant a payer par mois :" << montant_mois << endl;\par
+\tab\par
+\tab  cout << "\\n E-mail :" << e_mail<< endl;\par
+\tab\par
+\tab  cout << "\\n travail :" <<travail<< endl;\par
+\par
+\tab\par
+\tab /* cout << " la date d'inscription" << endl;\par
+\tab  Date::getJour();\par
+\tab  Date::getMois();\par
+\tab  Date::getAnnee();*/\par
+ \par
+ \}\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ \par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ // employ\'e9s\par
+ /*employ\'e9s :: employ\'e9s (string a, string aa, int aaa, int b, int bb , int bbb, string f , string ff, long c, int d, string e) :personne (a,aa,aaa), Date(b,bb,bbb),reg_employer(f,ff)\par
+ \{\par
+\tab  t\'e9l=c ;\par
+\tab  salaire_mois=d ;\par
+\tab e_mail=e ;\par
+ \}\par
+\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ le\'e7on::le\'e7on(string  a, int b, float c)\par
+ \{\par
+\tab   titre=a;\par
+\tab   ordre_module=b;\par
+\tab horaire_allouer=c;\par
+\par
+  \}\par
+\par
+\par
+  */\par
+ //**********************************\par
+ // employes\par
+ employ\'e9s::employ\'e9s(string a, string aa, string f, string ff, string e, int aaa, int b, int bb, int bbb, long c, float d,int z) :personne(a, aa, aaa, b, bb, bbb)\par
+ \{\par
+\tab  t\'e9l = c;\par
+\tab  salaire_mois = d;\par
+\tab  e_mail = e;\par
+\tab  num_cin =z;\par
+ \}\par
+ void employ\'e9s::saisir()\par
+ \{\par
+\tab  personne::saisir();\par
+\tab  cout << "donner le num\'e9ro de la carte cin " << endl;\par
+\tab  cin >> num_cin;\par
+\tab  cout << "donner la poste:" << endl;\par
+\tab  cin >> poste;\par
+\tab  cout << "donner le mode d'emploi:" << endl;\par
+\tab  cin >> mode_emplois;\par
+\tab  cout << "donner le numero du telephone:" << endl;\par
+\tab  cin >> t\'e9l;\par
+\tab  cout << "donner l'adresse mail:" << endl;\par
+\tab  cin >> e_mail;\par
+\tab  \par
+\tab  cout << "donner la salaire:" << endl;\par
+\tab  cin >> salaire_mois;\par
+\par
+ \}\par
+ void employ\'e9s::afficher()\par
+ \{\par
+\tab  personne::afficher();\par
+\tab  cout << "donner le num\'e9ro de la carte cin " << num_cin;\par
+\tab  cout << " la poste:" << poste;\par
+\tab  cout << "le mode d'emploi:" << mode_emplois;\par
+\tab  cout << " le numero du telephone:" << t\'e9l;\par
+\tab  cout << " la salaire:" << salaire_mois;\par
+\tab  cout << "donner l'adresse mail:" <<  e_mail;\par
+\tab  \par
+ \}\par
+\par
+\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ le\'e7on::le\'e7on(string  a, int b, int c, float e , int k)\par
+ \{\par
+\tab  titre = a;\par
+\tab  ordre_module = b;\par
+\tab  niveau = c;\par
+\tab  //nbr_le\'e7ons = d;\par
+\par
+\tab  horaire_allouer = e;\par
+\tab  num_theme = k;\par
+\par
+ \}\par
+\par
+ void le\'e7on::saisir_lesson()\par
+ \{\par
+\tab  //cout << "                     \\n donner le numero du theme         :";\par
+\tab // cin >> num_theme;\par
+\tab  cout << "\\n                      donner le  niveau                 :";\par
+\tab  cin >> niveau;\par
+\tab  cout << "\\n                      donner le titre du lecon          : ";\par
+\tab  cin >> titre;\par
+\tab  cout << "\\n                      donner l'ordre du le\'e7on:          : ";\par
+\tab  cin >> ordre_module;\par
+\tab\par
+\tab  cout << "\\n                      l'horaire allouer pour ce le\'e7on   :" ;\par
+\tab  cin >> horaire_allouer;\par
+\tab // cout << "donner le nombre du lecon :" << endl;\par
+\tab  //cin >> nbr_le\'e7ons;\par
+\par
+ \}\par
+ void le\'e7on::afficher()\par
+ \{\par
+\tab  //cout << "\\n                                   numero du  theme                  :" << num_theme << endl;\par
+\tab  cout << "                                     le niveau                            :" <<  niveau << endl;\par
+\tab  cout << "                                     le titre du lecon                   :" <<  titre << endl ;\par
+\tab  cout << "                                     l'ordre du le\'e7on                    :" << ordre_module << endl;\par
+\tab  cout << "                                     l'horaire allouer pour ce le\'e7on     :" << horaire_allouer << endl ;\par
+\tab  cout << "                                     \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+ \}\par
+ istream& operator >> (istream& in, le\'e7on &l)\par
+ \{\par
+\tab  cout << "donner niveau:" << endl;\par
+\tab  in >> l.niveau;\par
+\tab  cout << "donner le titre du lecon :" << endl;\par
+\tab  in >> l.titre;\par
+\tab  cout << "donner l'ordre du le\'e7on:" << endl;\par
+\tab  in >> l.ordre_module;\par
+\tab  cout << "donner l'horaire allouer :" << endl;\par
+\tab  in >> l.horaire_allouer;\par
+\tab  //cout << "donner le nombre du lecon :" << endl;\par
+\tab //in >> l.nbr_le\'e7ons;\par
+\tab  return in;\par
+\par
+ \}\par
+ ostream& operator<< (ostream& out, le\'e7on &l)\par
+\tab  \par
+ \{\par
+\tab  //out << "\\n                                   numero du  theme                  :" <<l.num_theme << endl;\par
+\tab  out << "                                     le niveau                            :" << l.niveau << endl;\par
+\tab  out << "                                     le titre du lecon                   :" << l.titre << endl;\par
+\tab  out << "                                     l'ordre du le\'e7on                    :" << l.ordre_module << endl;\par
+\tab  out << "                                     l'horaire allouer pour ce le\'e7on     :" << l.horaire_allouer << endl;\par
+\tab  out << "                                     \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\tab\par
+\tab  return out;\par
+ \}\par
+\par
+ module::module(const module& m)\par
+ \{\par
+\tab  \par
+\tab  for (int i = 0; i<tab_le\'e7on.size(); i++)\par
+\tab  \{\par
+\tab\tab  le\'e7on *l = new le\'e7on();\par
+\tab\tab  tab_le\'e7on.push_back(l);\par
+\tab\tab  l->saisir_lesson();\par
+\tab\tab  \par
+\tab  \}\par
+ \}\par
+ module::~module(void)\par
+ \{\par
+\tab  for (int i = 0; i<tab_le\'e7on.size(); i++)\par
+\tab\tab  delete tab_le\'e7on[i];\par
+\par
+ \}\par
+ module& module:: operator= (module& m)\par
+ \{\par
+\tab  le\'e7on *l;\par
+\tab  if (this != &m)\par
+\tab  \{\par
+\tab\tab\par
+\tab\tab  for (int i = 0; i<tab_le\'e7on.size(); i++)\par
+\tab\tab\tab  delete tab_le\'e7on[i];\par
+\tab\tab  tab_le\'e7on.clear();\par
+\tab\tab  for (int i = 0; i<m.tab_le\'e7on.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  l = new le\'e7on(*m.tab_le\'e7on[i]);\par
+\tab\tab\tab  tab_le\'e7on.push_back(l);\par
+\tab\tab  \}\par
+\par
+\tab  \}\par
+\par
+\tab  return *this;\par
+ \}\par
+\par
+\par
+ \par
+ istream& operator >> (istream& in, module &m)\par
+ \{ \par
+\tab\par
+\tab  char rep;\par
+\tab\par
+\tab  //remplissage\par
+\tab  do\par
+\tab  \{\par
+\tab\tab  cout << "\\n               ****donner les caracteristiques du le\'e7on" << endl;\par
+\tab\tab  le\'e7on *l = new le\'e7on;\par
+\tab\tab  cin >> *l;\par
+\tab\tab  m.tab_le\'e7on.push_back(l);\par
+\tab\tab  cout << "\\n voullez vous saisir d'autre le\'e7ons ???:\\n si oui tapez [O]\\n si non tapez [N]" << endl;\par
+\tab\tab  in >> rep;\par
+\tab  \}\par
+\tab  while (rep == 'o' || rep == 'O');\par
+\tab  return in;\par
+ \}\par
+ ostream& operator << (ostream& out, module &m)\par
+ \{\par
+\tab  \par
+\tab  for (int i = 0; i<m.tab_le\'e7on.size(); i++)\par
+\tab\tab  out << *m.tab_le\'e7on[i];\par
+\tab  return out;\par
+ \}\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0)))\par
+ /*\par
+ programme::~programme()\par
+ \{\par
+\tab  for (int i = 0; i<tab_module.size(); i++)\par
+\tab\tab  delete tab_module[i];\par
+\tab  tab_module.clear();\par
+ \}\par
+ void programme::saisir_mod()\par
+ \{\par
+\tab\par
+\tab  char rep;\par
+\tab  //remplissage\par
+\tab  do\par
+\tab  \{\par
+\tab\tab  cout << "*****Donner les caracteristiques du module:\\n\\n\\n " << endl;\par
+\tab\tab  module *md = new module;\par
+\tab\tab  tab_module.push_back(md);\par
+\tab\tab  cout << "donner le theme:" << endl;\par
+\tab\tab  //cin >> theme;\par
+\tab\tab  //md->set_theme(theme);\par
+\tab\tab  md->saisir();\par
+\tab\tab\par
+\tab\tab  cout << "\\n voullez vous saisir un autre module ??? \\n si oui tapez [O]\\n si non tapez [N]" << endl;\par
+\tab\tab  cin >> rep;\par
+\tab  \} while (rep == 'o' || rep == 'O');\par
+\par
+ \}\par
+\par
+ programme::programme(const programme& pr)\par
+ \{\par
+\tab  for (int i = 0; i<pr.tab_module.size(); i++)\par
+\tab  \{\par
+\tab\tab  module *pg = new module(*pr.tab_module[i]);\par
+\tab\tab  pg->saisir();\par
+\tab\tab  tab_module.push_back(pg);\par
+\tab  \}\par
+ \}\par
+ programme&  programme::operator=(programme& pr)\par
+ \{\par
+\tab  module *pg;\par
+\tab  if (this != &pr)\par
+\tab  \{\par
+\tab\tab  for (int i = 0; i<tab_module.size(); i++)\par
+\tab\tab\tab  delete tab_module[i];\par
+\tab\tab  tab_module.clear();\par
+\tab\tab  for (int i = 0; i<pr.tab_module.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  \par
+\tab\tab\tab  pg = new module(*pr.tab_module[i]);\par
+\tab\tab\tab  tab_module.push_back(pg);\par
+\tab\tab  \}\par
+\par
+\par
+\par
+\tab\tab  return *this;\par
+\tab  \}\par
+ \}\par
+ \par
+\par
+ \par
+int  programme::rechercherModule(int mod )\par
+\{\par
+\par
+\tab for (int i = 0; i < tab_module.size(); i++)\par
+\tab\{\par
+\tab\tab if (tab_module[i]->get_num_theme() == mod)\par
+\tab\tab\tab return i;\par
+\tab\}\par
+\tab\tab return (-1);\par
+ \}\par
+ void programme::supprimerModule( )\par
+ \{\par
+\tab  int mod;\par
+\tab  int i = 0;\par
+\tab  cout << " donner le num du module  \'e0 supprimer ( nom du theme) " << endl;\par
+\tab  cin >> mod;\par
+\tab  if (rechercherModule(mod) == (-1))\par
+\tab\tab  cout << "le module n'existe pas" << endl;\par
+\tab  else \{\par
+\tab\tab  i = rechercherModule(mod);\par
+\tab\tab   int rep, j = 1;\par
+\tab\tab  do\par
+\tab\tab  \{\par
+\tab\tab\tab  cout << "donner le nom du le\'e7on: "<< j << endl;\par
+\tab\tab\tab\par
+\tab\tab\tab  cout << "\\n LE MODULE "<< i <<"possed_il d'autre le\'e7ons ???:\\n si oui tapez [O]\\n si non tapez [N]" << endl;\par
+\tab\tab\tab  cin >> rep;\par
+\tab\tab\tab  j++;\par
+\tab\tab  \} while (rep == 'o' || rep == 'O');\par
+\tab\tab  tab_module.erase(tab_module.begin() + i);\par
+\tab\tab  cout << "le module et ses le\'e7ons sont suprimer avec succ\'e9s" << endl;\par
+\tab  \}\par
+\tab  \par
+\tab  \par
+ \}\par
+ void programme::afficherModule()\par
+ \{\par
+\tab\par
+\tab\par
+\tab  for (int i = 0; i < tab_module.size(); i++)\par
+\tab  \{\par
+\tab\tab  tab_module[i]->get_num_theme();\par
+\tab\tab  tab_module[i]->afficherle\'e7on();\par
+\tab\tab  cout << "\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0" << endl;\par
+\tab  \}\par
+ \}\par
+ \par
+\tab\tab\par
+\par
+ void programme::cree_Module(fstream& f)\par
+ \{\par
+\tab  f.open("c:/fichier_module.txt", ios::in | ios::out | ios::trunc);\par
+\tab  if (!f.is_open()) exit(-1);\par
+ \}\par
+ void programme::Module_Fichiers(fstream& f)\par
+ \{\par
+\tab  f << " La liste des modules " << endl;\par
+\par
+\tab  for (int i = 0; i<tab_module.size(); i++)\par
+\tab  \{\par
+\tab\tab  f << "le\'e7on" << i + 1 << endl;\par
+\tab\tab  f << tab_module[i];\par
+\tab  \}\par
+\tab  f.seekp(0);\par
+\tab  char ch[101];\par
+\tab  cout << "\\n                           les informations enregister dans cette fichier sont :" << endl;\par
+\tab  while (1)\par
+\tab  \{\par
+\tab\tab  f.getline(ch, 100);\par
+\tab\tab  if (f.eof()) break;\par
+\tab\tab  cout << ch << endl;\par
+\tab  \}\par
+\tab  f.close();\par
+ \}\par
+ istream& operator >> (istream& in, programme& pr)\par
+ \{\par
+\tab  char rep;\par
+\tab  do\par
+\tab  \{\par
+\tab\tab  cout << "donner les caracteristiques du module: " << endl;\par
+\tab\tab  module*pg = new module;\par
+\tab\tab  pr.saisir_mod();\par
+\tab\tab  pr.tab_module.push_back(pg);\par
+\tab\tab  cout << "\\n voullez vous saisir un autre le\'e7on ???" << endl;\par
+\tab\tab  in >> rep;\par
+\tab  \} while (rep == 'o' || rep == 'O');\par
+\tab  return in;\par
+ \}\par
+ ostream& operator<< (ostream& out, programme& pr)\par
+ \{\par
+\tab  for (int i = 0; i<pr.tab_module.size(); i++)\par
+\par
+\tab\tab  out << *pr.tab_module[i];\par
+\tab  return out;\par
+ \}*/\par
+\par
+ //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+ \par
+ \par
+\par
+ void f\'eate_vacances::ajouter_evt()\par
+ \{\par
+\tab  string c;\par
+\tab  string * s;\par
+\tab  char rep;\par
+\tab  do\par
+\tab  \{\par
+\tab\tab\par
+\tab\tab  cout << "Donner l'\'e9venement " << endl; cin >> c;\par
+\tab\tab  s = new string(c);\par
+\tab\tab  tab_evt.push_back(s);\par
+\tab\tab  cout << "\\n\\n    ***  L'evenement a ete ajoutee avec succes   ***\\n\\n" << endl;\par
+\tab\tab  cout << "\\n Voulez vous rajouter? [O/N] " << endl;\par
+\tab\tab  cin >> rep;\par
+\tab  \} while (rep == 'o' || rep == 'O');\par
+ \}\par
+\par
+ \par
+ void f\'eate_vacances::afficher_evt()\par
+ \{   \par
+\tab  if (tab_evt.size() == 0) cout << " la liste est vide \\n vous devez ajouter au mois un ev\'e9nement " << endl; \par
+\tab  else \{\par
+\tab\tab  for (int i = 0; i < tab_evt.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  cout << "\\n l'evenement num\'e9ro :\\n  " << i + 1 << ":";\par
+\tab\tab\tab  cout << *tab_evt[i];\par
+\tab\tab  \}\par
+\tab\tab  \par
+\tab  \}\par
+\tab  \par
+ \}\par
+ int f\'eate_vacances::rechercher_evt( string x)\par
+ \{\par
+\tab  \par
+\tab  int a = -1;\par
+\tab\tab  for (int i = 0; i < tab_evt.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  if (*tab_evt[i] == x)\par
+\tab\tab\tab  \{\par
+\tab\tab\tab\tab  return i;\par
+\tab\tab\tab  \}\par
+\tab\tab\tab  return a;\par
+\tab\tab  \}\par
+\tab  \par
+ \}\par
+\tab  void f\'eate_vacances ::supprimer_evt()\par
+\tab  \{\par
+\tab\tab  string x;\par
+\tab\tab  cout << "donner le nom d'evenement \'e0  supprimer " << endl;\par
+\tab\tab  cin >> x;\par
+\tab\tab  int y = rechercher_evt(x);\par
+\tab\tab  if ( y != -1) \par
+\tab\tab  \{\par
+\tab\tab\tab  tab_evt.erase(tab_evt.begin()+ y);\par
+\tab\tab\tab  cout << "le module est suprimer avec succ\'e9s" << endl;\par
+\tab\tab  \}\par
+\tab\tab\tab\par
+\tab\tab  else  cout << "l'\'e9venement n'existe pas " << endl; \par
+\tab  \}\par
+\tab\par
+\par
+\tab  void f\'eate_vacances::cree_evt(fstream& f)\par
+\tab  \{\par
+\tab\tab  f.open("fichier_evt.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab  if (!f.is_open()) exit(-1);\par
+\tab  \}\par
+\tab  void f\'eate_vacances ::evt_Fichiers(fstream& f)\par
+\tab  \{\par
+\tab\tab  char ch[101];\par
+\tab\tab  f << " La liste des evt " << endl;\par
+\par
+\tab\tab  for (int i = 0; i<tab_evt.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  f << "evenement" << i + 1 << endl;\par
+\tab\tab\tab  f << *tab_evt[i]<<endl;\par
+\tab\tab  \}\par
+\tab\tab  f.seekp(0);\par
+\tab\tab  cout << "\\n                           les informations enregister dans cette fichier sont :" << endl;\par
+\tab\tab  while (1)\par
+\tab\tab  \{\par
+\tab\tab\tab  f.getline(ch, 100);\par
+\tab\tab\tab  if (f.eof()) break;\par
+\tab\tab\tab  cout << ch << endl;\par
+\tab\tab  \}\par
+\tab\tab  f.close();\par
+\tab  \}\par
+\par
+// \'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+\tab int  jardin::recherche_parent()\par
+\tab  \{\par
+\tab\tab  int num;\par
+\tab\tab  cout << "donner le num\'e9ro d'inscription du parent (unique) " << endl;\par
+\tab\tab  cin >> num;\par
+\tab\tab  for (int i = 0; i < tab2.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  cout << "\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0";\par
+\tab\tab\tab  if (tab2[i]->get_num_inscription() == num)\par
+\tab\tab\tab\tab  return i+1;\par
+\tab\tab  \}\par
+\tab\tab  return (-1 );\par
+\tab  \}\par
+\par
+\par
+\tab int  jardin ::recherche_employer()\par
+\tab  \{\par
+\tab\tab  int num;\par
+\tab\tab  cout << "donner le num\'e9ro de la carte d'identite de cet employer  " << endl;\par
+\tab\tab  cin >> num;\par
+\tab\tab  for (int i = 0; i < tab3.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  if (tab3[i]->get_num_cin() == num)\par
+\tab\tab\tab\tab  return i+1;\par
+\tab\tab  \}\par
+\tab\tab  return -1;\par
+\tab  \}\par
+\par
+\tab\par
+   \par
+\tab\par
+\tab  void  jardin :: securite()\par
+\tab  \{ \par
+\tab\tab  cout << "verfication de l'identit\'e9 de l'accompagnant " << endl;\par
+\tab\tab  int i = recherche_parent();\par
+\tab\tab  if (i != (-1))\par
+\tab\tab  \{\par
+\tab\tab\tab  cout << "                       vous devez prendre la permission des parents " << endl;\par
+\tab\tab\tab  cout << "                       voici le num\'e9ro de t\'e9lephone " << tab2[i - 1]->get_t\'e9l() << endl;\par
+\tab\tab\tab  cout << "                       EST_CE VOUS AVEZ PRIS LA PERMISSION \\n" << endl;\par
+\tab\tab\tab  cout << "                      \\n si oui tapez [1] \\n si non tapez [0] \\n" << endl;\par
+\tab\tab\tab  int reponse;\par
+\tab\tab\tab  cin >> reponse;\par
+\tab\tab\tab  switch (reponse)\par
+\tab\tab\tab  \{\par
+\tab\tab\tab  case 1: \{ cout << "\\n\\nvous pouvez donner l'enfant \'e0 cet accompagnant , l'enfant est s\'e9curise\\n " << endl;  break; \}\par
+\tab\tab\tab  case 0: \{ cout << " \\n \\n                               **** ATTENTION ***** \\nIl est strictement interdit de donner l'enfant a cet accompagnant " << endl; break; \}\par
+\tab\tab\tab  default: \{ cout << " vous devez preciser votre choix "; \}\par
+\tab\tab\tab  \}\par
+\tab\tab\tab\tab  char ch[101];\par
+\tab\tab\tab     fstream f;\par
+\tab\tab\tab\tab  f.open("securite.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab\tab\tab  if (!f.is_open()) cout << "\\n erreur" << endl;\par
+\tab\tab\tab\tab  \par
+\tab\tab\tab\tab  switch (reponse)\par
+\tab\tab\tab\tab  \{\par
+\tab\tab\tab\tab  case 1: \{ f << "\\n\\nvous pouvez donner l'enfant \'e0 cet accompagnant , l'enfant est s\'e9curise\\n " << endl;  break; \}\par
+\tab\tab\tab\tab  case 0: \{ f << " \\n \\n                                **** ATTENTION ***** \\nIl est strictement interdit de donner l'enfant a cet accompagnant " << endl; break; \}\par
+\tab\tab\tab\tab  default: \{ f << " vous devez preciser votre choix "; \}\par
+\tab\tab\tab\tab  \}\par
+\tab\tab\tab\par
+\tab\tab\tab\tab  f.seekp(0);\par
+\tab\tab\tab\tab  cout << "\\n                           les informations enregister dans cette fichier sont :" << endl;\par
+\tab\tab\tab\tab  while (1)\par
+\tab\tab\tab\tab  \{\par
+\tab\tab\tab\tab\tab  f.getline(ch, 100);\par
+\tab\tab\tab\tab\tab  if (f.eof()) break;\par
+\tab\tab\tab\tab\tab  cout << ch << endl;\par
+\tab\tab\tab\tab  \}\par
+\tab\tab\tab\tab  f.close();\par
+\tab\tab\tab  \}\par
+\tab\tab  \par
+\tab  \}\par
+\tab\par
+\par
+\tab  void   jardin::paiement()\par
+\tab  \{\par
+\tab\tab  int X = recherche_parent();\par
+\tab\tab  if (  X != (-1))\par
+\par
+\tab\tab  \{\par
+\tab\tab\tab  int mois;\par
+\par
+\tab\tab\tab  cout << "saisir le mois (en chiffre [1..12]) \\n" << endl;\par
+\tab\tab\tab  cin >> mois;\par
+\par
+\tab\tab\tab  bool ok = false;\par
+\tab\tab\tab  for (int i = 0; i < tab_pay.size(); i++)\par
+\tab\tab\tab  \{\par
+\tab\tab\tab\tab  if (tab_pay[i] == mois)\par
+\tab\tab\tab\tab  \{\par
+\tab\tab\tab\tab\tab  cout << "\\n                  Ce mois est deja PAYE " << endl;\par
+\tab\tab\tab\tab\tab  ok = true;\par
+\tab\tab\tab\tab  \}\par
+\tab\tab\tab  \}\par
+\tab\tab\tab  if (ok == false)\par
+\par
+\tab\tab\tab  \{\par
+\tab\tab\tab\tab  cout << " \\n                       VOUS DEVEZ PAYER: " << tab2[X - 1]->get_montant_mois() << endl;\par
+\tab\tab\tab\tab  tab_pay.push_back(mois);\par
+\tab\tab\tab  \}\par
+\tab\tab  \}\par
+\tab\tab  else\par
+\tab\tab  \{\par
+\tab\tab\tab  cout << " vous devez saisir un parent deja inscrit " << endl;\par
+\tab\tab  \}\par
+\tab\par
+\tab  \}\par
+\par
+\tab\tab   \par
+\par
+\tab  void  jardin::salaire()\par
+\tab  \{ \par
+\tab\tab  int x = recherche_employer();\par
+\tab\tab  if ( x != (-1))\par
+\tab\tab  \{\par
+\tab\tab\tab  int mois;\par
+\par
+\tab\tab\tab  cout << "saisir le mois (en chiffre [1..12]) \\n" << endl;\par
+\tab\tab\tab  cin >> mois;\par
+\par
+\tab\tab\tab  bool ok = false;\par
+\tab\tab\tab  for (int i = 0; i <tab_salaire.size(); i++)\par
+\tab\tab\tab  \{\par
+\tab\tab\tab\tab  if (tab_salaire[i] == mois)\par
+\tab\tab\tab\tab  \{\par
+\tab\tab\tab\tab\tab  cout << "  l'employer : " << tab3[x-1]->get_num_cin() << " \'e0 deja pris son salaire" << endl;\par
+\tab\tab\tab\tab\tab  ok = true;\par
+\tab\tab\tab\tab  \}\par
+\tab\tab\tab  \}\par
+\par
+\tab\tab\tab  if (ok == false)\par
+\par
+\tab\tab\tab  \{\par
+\tab\tab\tab\tab  cout << "on doit verser ce montant : " << tab3[x -1]->get_salaire_mois() << "dans son compte " << endl;\par
+\tab\tab\tab\tab  tab_salaire.push_back(mois);\par
+\tab\tab\tab\tab  \par
+\tab\tab\tab  \}\par
+\tab\tab\tab\par
+\tab\tab  \}\par
+\tab\tab  else \par
+\tab\tab\tab  cout << " vous devez saisir un employer  deja inscrit " << endl;\par
+\par
+\tab  \}\par
+\tab\par
+\tab /* void  jardin::creation_employer(fstream& f)\par
+\tab  \{\par
+\tab\tab  f.open("c:/fichier_employer.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab  if (!f.is_open()) exit(-1);\par
+\tab  \}\par
+\tab  void  jardin::employer_Fichiers(fstream& f)\par
+\tab  \{\par
+\tab\tab  f << " La liste des employ\'e9s " << endl;\par
+\par
+\tab\tab  for (int i = 0; i<tab3.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  f << "lemploy\'e9s" << i + 1 << endl;\par
+\tab\tab\tab  f << tab3[i];\par
+\tab\tab  \}\par
+\tab  \}\par
+\tab  void  jardin::creation_enfant(fstream& f)\par
+\tab  \{\par
+\tab\tab  f.open("c:/fichier_enfant.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab  if (!f.is_open()) exit(-1);\par
+\tab  \}\par
+\tab  void  jardin::enfant_Fichiers(fstream& f)\par
+\tab  \{\par
+\tab\tab  f << " La liste des enfant" << endl;\par
+\par
+\tab\tab  for (int i = 0; i<tab1.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  f << "enfant" << i + 1 << endl;\par
+\tab\tab\tab  f << tab1[i];\par
+\tab\tab  \}\par
+\tab  \}\par
+\tab  void  jardin::creation_parent(fstream& f)\par
+\tab  \{\par
+\tab\tab  f.open("c:/fichier_parent.txt", ios::in | ios::out | ios::trunc);\par
+\tab\tab  if (!f.is_open()) exit(-1);\par
+\tab  \}\par
+\tab  void  jardin::parent_Fichiers(fstream& f)\par
+\tab  \{\par
+\tab\tab  f << " La liste des parent" << endl;\par
+\par
+\tab\tab  for (int i = 0; i<tab2.size(); i++)\par
+\tab\tab  \{\par
+\tab\tab\tab  f << "parent" << i + 1 << endl;\par
+\tab\tab\tab  f << *tab2[i]<<endl;\par
+\tab\tab  \}\par
+\tab  \}\par
+\par
+\tab  */\par
+\par
+\tab  //\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\par
+\tab\par
+\tab  \par
+\par
+\par
+\par
+\par
+\par
+\tab  void repas_journ\'e9e::saisir_repas()\par
+\tab  \{\par
+\tab\tab  cout << "                                     donner le numero du MENU       :"; cin >> num_menu;\par
+\tab\tab  cout << "\\n                                   donner le plat d'entr\'e9e        :"; cin >> entr\'e9e;\par
+\tab\tab  cout << "\\n                                   donner le plat_principale      :"; cin >> plat_principale;\par
+\tab\tab  cout << "\\n                                   donner le dessert              :"; cin >> dessert;\par
+\tab  \}\par
+\tab  void  repas_journ\'e9e::afficher_repas()\par
+\tab  \{\par
+\tab\tab  cout << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le numero du MENU \\n"<< num_menu;\par
+\tab\tab  cout << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le plat d'entr\'e9e \\n"<< entr\'e9e;\par
+\tab\tab  cout << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0 le plat_principale \\n"<< plat_principale;\par
+\tab\tab  cout << "\\n\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0\'b0le dessert  \\n" << dessert;\par
+\par
+\tab  \}\par
+\tab  void repas_journ\'e9e:: modifier_repas()\par
+\tab  \{\par
+\tab\tab  string modification;\par
+\tab\tab  int choix;\par
+\tab\tab  string mod; \par
+\tab\tab  cout << "                 Qu'est ce vous voulez modifiez ::\\n Entr\'e9e  tapez [1]\\n Plat_principale  tapez [2]\\n Dessert  tapez [3]\\n ";\par
+\tab\tab  cin >> choix;\par
+\tab\tab  switch (choix)\par
+\tab\tab  \{ \par
+\tab\tab  case\tab 1: \{ cout << "Entrer votre modification \\n"; cin >> mod;  entr\'e9e = mod; break; \}\par
+\tab\tab  case\tab 2: \{cout << "Entrer votre modification\\n "; cin >> mod;  plat_principale = mod; break; \}\par
+\tab\tab  case\tab 3: \{ cout << "Entrer votre modification \\n"; cin >> mod;  dessert = mod; break; \}\par
+\tab\tab  default: \{cout << "choix incorrect\\n"; \}\par
+\tab\tab  \}\par
+\tab\tab\par
+\tab  \}\par
+\par
+\tab  \par
+\tab  /*void repas::ajouter()\par
+\tab  \{\par
+\tab\tab  char rep;\par
+\tab  do\par
+\tab  \{\par
+\tab\tab  cout << "donner les caracteristiques du repas: " << endl;\par
+\tab\tab  repas_journ\'e9e *rp = new repas_journ\'e9e;\par
+\tab\tab  rp->saisir();\par
+\tab\tab  tab.push_back(rp);\par
+\tab\tab  cout << "\\n voullez vous saisir un autre repas ??? \\n si oui tapez [O]\\n si non tapez [N]" << endl;\par
+\tab\tab  cin >> rep;\par
+\tab  \} while (rep == 'o' || rep == 'O');\par
+\par
+\tab  \}\par
+\tab */\par
+\tab\par
+\tab                        ///////////////////////////////\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
