@@ -1,0 +1,2 @@
+Ce projet sert a améliorée notre comportement vis_à_vis nos déchets et chercher les meilleurs optimisation afin de rendre nos déchets benifique et réutilisable.
+L'application est codée en C sous visual studio.
